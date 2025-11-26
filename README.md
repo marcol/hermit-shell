@@ -1,0 +1,2 @@
+# hermit-shell
+Shell configuration.
