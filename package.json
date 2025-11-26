@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "lint:md": "remark **/*.md --ignore-path node_modules/**"
+    "lint:md": "remark **/*.md --silently-ignore"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
