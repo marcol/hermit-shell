@@ -7,11 +7,18 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "lint:md": "remark"
+    "lint:md": "remark **/*.md --ignore-path node_modules/**"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "lefthook": "^2.0.4",
     "remark-cli": "^12.0.1",
     "remark-preset-lint-markdown-style-guide": "^6.0.1"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-markdown-style-guide"
+    ]
   }
 }

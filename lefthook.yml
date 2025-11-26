@@ -8,11 +8,20 @@ pre-push:
         - security
       run: yarn audit --groups dependencies
 
+commit-msg:
+  commands:
+    "lint commit message":
+      run: yarn run commitlint --edit {1}
+      tags:
+        - lint
+        - git
+        - commit
+
 pre-commit:
   parallel: true
   jobs:
     - name: lint markdown files
       tags:
         - lint
-      run: yarn lint:md {staged_files}
-      glob: "*.{md}"
+      run: yarn run remark {staged_files} --silently-ignore
+      glob: "*.md"
