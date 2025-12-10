@@ -13,6 +13,24 @@ Shell configuration.
 - [ ] starship.
 - [ ] EditorConfig.
 
+## Documentation
+
+### Bash
+
+#### Alias
+
+- `..`: Change directory to parent
+- `cd..`: Change directory to parent
+- `...`: Change directory to grandparent
+- `....`: Change directory to great-grandparent
+- `~`: Change directory to home
+- `--`: Change directory to previous
+- `reload`: Reload shell configuration
+- `ll`: List files in long format with human-readable sizes
+- `la`: List all files including hidden files
+- `lsd`: List directories with colorized output
+- `grep`: Search for a pattern in files with colorized output
+
 ## Development
 
 ### Scripts
