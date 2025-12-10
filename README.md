@@ -2,6 +2,17 @@
 
 Shell configuration.
 
+## TO DO
+
+- [ ] Bash support.
+- [ ] Zsh support.
+- [ ] Fish support.
+- [ ] NeoVim config. https://nvchad.com
+- [ ] Tmux config.
+- [ ] Git config.
+- [ ] starship.
+- [ ] EditorConfig.
+
 ## Development
 
 ### Scripts
