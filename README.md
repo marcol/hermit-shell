@@ -32,6 +32,10 @@ Shell configuration.
 - `lsd`: List directories with colorized output
 - `grep`: Search for a pattern in files with colorized output
 
+### EditorConfig
+
+Helps with consistency of coding styles between different editors and IDEs. See [EditorConfig](https://editorconfig.org/) for more details.
+
 ## Development
 
 ### Scripts
