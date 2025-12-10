@@ -12,6 +12,7 @@ Shell configuration.
 - [ ] Git config.
 - [ ] starship.
 - [ ] EditorConfig.
+- [ ] Installation script
 
 ## Documentation
 
@@ -35,13 +36,13 @@ Shell configuration.
 
 ### Scripts
 
-- `npm run lint:md`: Lint markdown files.
+- `yarn lint:md`: Lint markdown files.
 
 ### Commit Messages
 
 Follow the conventions of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) leveraging [commitlint](https://commitlint.js.org).
 
-```
+```bash
 type(scope?): subject
 ```
 
