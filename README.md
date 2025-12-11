@@ -55,6 +55,10 @@ Shell configuration.
 - `f`: find shorthand
 - `escape`: Escape special characters in a string
 
+#### Extras
+
+Extra configurations can be added in the `~/.extra` file. This file is sourced at the end of the `bashrc` file if it exists and is readable.
+
 ### EditorConfig
 
 Helps with consistency of coding styles between different editors and IDEs. See [EditorConfig](https://editorconfig.org/) for more details.
