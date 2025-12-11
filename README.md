@@ -6,10 +6,10 @@ Shell configuration.
 
 - [ ] Zsh support.
 - [ ] Fish support.
-- [ ] NeoVim config. https://nvchad.com
-- [ ] starship.
-- [ ] brewrc
 - [ ] Vim
+- [ ] brewrc
+- [ ] NeoVim config. https://nvchad.com
+- [x] starship.
 - [x] Git config.
 - [x] Bash support.
 - [x] Installation script
@@ -31,9 +31,10 @@ Shell configuration.
 
 ## Documentation
 
-- [Bash Configuration](docs/bash.md)
-- [EditorConfig](docs/editorconfig.md)
-- [Git Configuration](docs/git.md)
+- [Bash configuration](docs/bash.md)
+- [EditorConfig configuration](docs/editorconfig.md)
+- [Git configuration](docs/git.md)
+- [Starship configuration](docs/starship.md)
 
 ## Development
 
