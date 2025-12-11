@@ -4,15 +4,15 @@ Shell configuration.
 
 ## TO DO
 
-- [x] Bash support.
+- [ ] Git config.
 - [ ] Zsh support.
 - [ ] Fish support.
 - [ ] NeoVim config. https://nvchad.com
 - [ ] Tmux config.
-- [ ] Git config.
 - [ ] starship.
 - [ ] brewrc
 - [ ] Vim
+- [x] Bash support.
 - [x] Installation script
 - [x] EditorConfig.
 
@@ -32,36 +32,9 @@ Shell configuration.
 
 ## Documentation
 
-### Bash
-
-#### Alias
-
-- `..`: Change directory to parent
-- `cd..`: Change directory to parent
-- `...`: Change directory to grandparent
-- `....`: Change directory to great-grandparent
-- `~`: Change directory to home
-- `--`: Change directory to previous
-- `reload`: Reload shell configuration
-- `ll`: List files in long format with human-readable sizes
-- `la`: List all files including hidden files
-- `lsd`: List directories with colorized output
-- `grep`: Search for a pattern in files with colorized output
-
-#### Functions
-
-- `gitexport`: Export git repository to a specified directory
-- `mkd`: Create a directory and change into it
-- `f`: find shorthand
-- `escape`: Escape special characters in a string
-
-#### Extras
-
-Extra configurations can be added in the `~/.extra` file. This file is sourced at the end of the `bashrc` file if it exists and is readable.
-
-### EditorConfig
-
-Helps with consistency of coding styles between different editors and IDEs. See [EditorConfig](https://editorconfig.org/) for more details.
+- [Bash Configuration](docs/bash.md)
+- [EditorConfig](docs/editorconfig.md)
+- [Git Configuration](docs/git.md)
 
 ## Development
 
