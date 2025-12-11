@@ -20,14 +20,15 @@ Shell configuration.
 
 1. Clone the repository on your home directory, i.e. `cd ~`:
 
-   ```bash
-    git clone https://github.com/marcol/hermit-shell.git
-   ```
+```bash
+ git clone https://github.com/marcol/hermit-shell.git
+```
 
-2. Run the instalation script install.sh, located in the repository root (`~/hermit-shell/install.sh`):
-   ```bash
-     sh install.sh
-   ```
+1. Run the instalation script install.sh, located in the repository root (`~/hermit-shell/install.sh`):
+
+```bash
+  sh install.sh
+```
 
 ## Documentation
 
