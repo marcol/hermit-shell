@@ -4,15 +4,30 @@ Shell configuration.
 
 ## TO DO
 
-- [ ] Bash support.
+- [x] Bash support.
 - [ ] Zsh support.
 - [ ] Fish support.
 - [ ] NeoVim config. https://nvchad.com
 - [ ] Tmux config.
 - [ ] Git config.
 - [ ] starship.
-- [ ] EditorConfig.
-- [ ] Installation script
+- [ ] brewrc
+- [ ] Vim
+- [x] Installation script
+- [x] EditorConfig.
+
+## Instalation
+
+1. Clone the repository on your home directory, i.e. `cd ~`:
+
+   ```bash
+    git clone https://github.com/marcol/hermit-shell.git
+   ```
+
+2. Run the instalation script install.sh, located in the repository root (`~/hermit-shell/install.sh`):
+   ```bash
+     sh install.sh
+   ```
 
 ## Documentation
 
@@ -31,6 +46,13 @@ Shell configuration.
 - `la`: List all files including hidden files
 - `lsd`: List directories with colorized output
 - `grep`: Search for a pattern in files with colorized output
+
+#### Functions
+
+- `gitexport`: Export git repository to a specified directory
+- `mkd`: Create a directory and change into it
+- `f`: find shorthand
+- `escape`: Escape special characters in a string
 
 ### EditorConfig
 

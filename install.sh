@@ -1,40 +1,40 @@
 #!/bin/sh
 
-# TO DO
-# function linkFiles() {
+function linkFiles() {
 
-#   FILES="${ZDOTDIR:-$HOME}/.dotfiles/src/!(*.{fish})"
+  FILES="${ZDOTDIR:-$HOME}/hermit-shell/src/!(*.{fish})"
 
-#   echo "\n*** Linking files"
+  echo "\n*** Linking files"
 
-#   for rcfile in $FILES; do
-#     if [ -e $rcfile ]; then
-#       echo "Creating symlink for: ."$(basename "$rcfile")
-#       ln -fs "$rcfile" "${ZDOTDIR:-$HOME}/."$(basename "$rcfile")
-#     fi
-#   done
+  for rcfile in $FILES; do
+    if [ -e $rcfile ]; then
+      echo "Creating symlink for: ."$(basename "$rcfile")
+      ln -fs "$rcfile" "${ZDOTDIR:-$HOME}/."$(basename "$rcfile")
+    fi
+  done
 
-# }
+  # copy fish configuration
+  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/config.fish" "${ZDOTDIR:-$HOME}/.config/fish/config.fish"
 
-# # link files
-# if [ "$1" == "--force" -o "$1" == "-f" ]; then
-#   linkFiles
-# else
-#   read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
-#   echo
-#   if [[ $REPLY =~ ^[Yy]$ ]]; then
-#     shopt -s extglob
-#     linkFiles
-#     shopt -u extglob
-#   fi
-# fi
+  # copy starship configuration
+  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/theme/starship.toml" "${ZDOTDIR:-$HOME}/.config/starship.toml"
 
-# # copy fish configuration
-# ln -fs "${ZDOTDIR:-$HOME}/.dotfiles/src/config.fish" "${ZDOTDIR:-$HOME}/.config/fish/config.fish"
+  shopt -u extglob
 
-# # copy starship configuration
-# ln -fs "${ZDOTDIR:-$HOME}/.dotfiles/theme/starship.toml" "${ZDOTDIR:-$HOME}/.config/starship.toml"
+}
 
-# echo "\nDone!"
+# link files
+if [ "$1" == "--force" -o "$1" == "-f" ]; then
+  linkFiles
+else
+  read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    shopt -s extglob
+    linkFiles
+  fi
+fi
 
-# unset linkFiles
+echo "\nDone!"
+
+unset linkFiles
