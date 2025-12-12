@@ -44,5 +44,5 @@ alias pip='pipx'
 alias reload='source "${HOME}/.zshrc" && echo "sourced ${HOME}/.zshrc"'
 alias update="brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g"
 
-Starship
+# Starship
 eval "$(starship init zsh)"
