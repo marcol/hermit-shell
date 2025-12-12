@@ -4,11 +4,11 @@ Shell configuration.
 
 ## TO DO
 
-- [ ] Zsh support.
 - [ ] Fish support.
 - [ ] Vim
 - [ ] brewrc
 - [ ] NeoVim config. https://nvchad.com
+- [x] Zsh support.
 - [x] starship.
 - [x] Git config.
 - [x] Bash support.

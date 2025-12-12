@@ -4,6 +4,7 @@
 
 - `pip` - alias for pipx
 - `reload` - reload zsh configuration
+- `update` - update brew and node
 
 ## Oh my shell
 
