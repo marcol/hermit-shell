@@ -1,0 +1,129 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](#282828)\
+[󰏒 ](bg:#282828)\
+[](bg:#B71D49 fg:#282828)\
+$directory\
+[](bg:#A51583 fg:#B71D49)\
+$docker_context\
+[](fg:#A51583 bg:#E2A200)\
+$git_branch\
+$git_status\
+[](fg:#E2A200 bg:#0087D5)\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+[](fg:#0087D5 bg:#AD9E7F)\
+$time\
+$status\
+"""
+
+[directory]
+style = "bg:#B71D49"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:#E2A200"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#E2A200"
+format = '[$all_status$ahead_behind ]($style)'
+
+[c]
+symbol = " "
+style = "bg:#0087D5"
+format = '[ $symbol ($version) ]($style)'
+
+[cpp]
+symbol = " "
+style = "bg:#0087D5"
+format = '[ $symbol ($version) ]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:#0087D5"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#0087D5"
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#0087D5"
+format = '[ $symbol ($version) ]($style)'
+
+[gradle]
+style = "bg:#0087D5"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#0087D5"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#0087D5"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#0087D5"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#0087D5"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = "󰆥 "
+style = "bg:#0087D5"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#0087D5"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "bg:#0087D5"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#A51583"
+format = '[ $symbol $context ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#AD9E7F"
+format = '[ $time ]($style)'
+
+[status]
+style = 'bg:#AD9E7F'
+symbol = '[](fg:#AD9E7F bg:#A51024)[](fg:#A51024)'
+success_symbol = '[](fg:#AD9E7F bg:#038603)[](fg:#038603)'
+not_executable_symbol = '[](fg:#AD9E7F bg:#A51024)[](fg:#A51024)'
+not_found_symbol = '[](fg:#AD9E7F bg:#E2A200)[](fg:#E2A200)'
+format = '$symbol '
+map_symbol = true
+disabled = false
