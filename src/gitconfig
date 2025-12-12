@@ -57,6 +57,7 @@
   cmd = vim -d "$LOCAL" "$MERGED" "$REMOTE"
   trustExitCode = true
 [core]
+	editor = nvim
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
   whitespace = space-before-tab,indent-with-non-tab,trailing-space
