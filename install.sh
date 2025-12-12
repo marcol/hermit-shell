@@ -2,7 +2,7 @@
 
 function linkFiles() {
 
-  FILES="${ZDOTDIR:-$HOME}/hermit-shell/src/!(*.{fish})"
+  FILES="${ZDOTDIR:-$HOME}/hermit-shell/src/!(*.{fish|toml})"
 
   echo "\n*** Linking files"
 
@@ -17,7 +17,7 @@ function linkFiles() {
   ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/config.fish" "${ZDOTDIR:-$HOME}/.config/fish/config.fish"
 
   # copy starship configuration
-  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/theme/starship.toml" "${ZDOTDIR:-$HOME}/.config/starship.toml"
+  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/starship.toml" "${ZDOTDIR:-$HOME}/.config/starship.toml"
 
   shopt -u extglob
 
@@ -34,6 +34,11 @@ else
     linkFiles
   fi
 fi
+
+# Homebrew items
+# Install homebrew
+# brew install pygments
+# brew install starship
 
 echo "\nDone!"
 
