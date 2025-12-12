@@ -18,6 +18,19 @@ git clone https://github.com/marcol/hermit-shell.git
 
 3. Choose the desired shell. Zsh: `chsh -s $(which zsh)`, Fish: `chsh -s "$(command -v fish)"`.
 
+### Homebrew items
+
+There are a few packages installed through homebrew (check `install.sh`):
+
+- pygments
+- starship
+- neovim
+- font-fira-code-nerd-font
+
+### NVChad
+
+You can install NeoVim (i.e. `brew install neovim`) and [NVChad](https://nvchad.com/docs/quickstart/install).
+
 ## Documentation
 
 - [Bash configuration](docs/bash.md)

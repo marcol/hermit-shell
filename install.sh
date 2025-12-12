@@ -35,10 +35,11 @@ else
   fi
 fi
 
-# Homebrew items
-# Install homebrew
-# brew install pygments
-# brew install starship
+# Homebrew items (https://brew.sh)
+brew install pygments
+brew install starship
+brew install neovim
+brew install --cask font-fira-code-nerd-font
 
 echo "\nDone!"
 
