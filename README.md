@@ -2,19 +2,6 @@
 
 Shell configuration.
 
-## TO DO
-
-- [ ] Fish support.
-- [ ] Vim
-- [ ] brewrc
-- [ ] NeoVim config. https://nvchad.com
-- [x] Zsh support.
-- [x] starship.
-- [x] Git config.
-- [x] Bash support.
-- [x] Installation script
-- [x] EditorConfig.
-
 ## Instalation
 
 1. Clone the repository on your home directory, i.e. `cd ~`:
@@ -29,10 +16,13 @@ git clone https://github.com/marcol/hermit-shell.git
 ./install.sh
 ```
 
+3. Choose the desired shell. Zsh: `chsh -s $(which zsh)`, Fish: `chsh -s "$(command -v fish)"`.
+
 ## Documentation
 
 - [Bash configuration](docs/bash.md)
 - [Zsh configuration](docs/zsh.md)
+- [Fish](docs/fish.md)
 - [EditorConfig configuration](docs/editorconfig.md)
 - [Git configuration](docs/git.md)
 - [Starship configuration](docs/starship.md)

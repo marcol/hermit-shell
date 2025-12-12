@@ -11,7 +11,7 @@ alias reload="source ~/.config/fish/config.fish"
 alias pip="pipx"
 
 # Update everything
-alias update="brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update"
+alias update="brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g"
 
 string match -q "$TERM_PROGRAM" "vscode"
 and . (code --locate-shell-integration-path fish)

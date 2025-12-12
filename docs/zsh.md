@@ -23,3 +23,7 @@
 - [yarn](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/yarn)
 - [zsh-interactive-cd](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/zsh-interactive-cd)
 - [zsh-navigation-tools](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/zsh-navigation-tools)
+
+## Resources
+
+- [zsh]()
