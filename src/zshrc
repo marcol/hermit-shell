@@ -40,6 +40,7 @@ bindkey "^R" znt-history-widget
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Alias
+alias git='LANG=en_US.UTF-8 git'
 alias pip='pipx'
 alias reload='source "${HOME}/.zshrc" && echo "sourced ${HOME}/.zshrc"'
 alias update="brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g"
