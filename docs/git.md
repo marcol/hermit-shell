@@ -4,45 +4,60 @@
 
 ### Common
 
+- `co`: checkout
 - `rb`: rebase
+- `st`: status
 - `up`: pull with rebase and prune, then show log of pulled commits
 
-### Diff, staging and committing
+### Diff
 
-- `st`: status
+- `dci`: diff of unpushed commits
 - `df`: diff
 - `dh`: show the diff between the latest commit and the current state
-- `dci`: diff of unpushed commits
 - `dlast`: diff last committed
+
+### Commit
+
+- `amend`: amend your last commit
+- `ca`: add all changes and commit with verbose output
+- `ci`: commit
 - `solve`: launch mergetool with vimdiff
 - `uncommit`: go back before last commit, with files in uncommitted state
-- `ci`: commit
-- `ca`: add all changes and commit with verbose output
-- `amend`: amend your last commit
+- `unstage`: unstage all staged files
+
+### Push
+
 - `ps`: push
 - `undopush`: git push -f origin HEAD^:master
 
 ### Branches
 
-- `br`: branch
-- `co`: checkout
 - `bc`: create brtanch locally and set upstream to origin
 - `bd`: delete branch locally and remotely
+- `br`: branch
 - `branches`: list all branches
+
+### Contribution
+
+- `contributors`: list contributors with number of commits
+- `hist`: Show history log
+- `l`: abbreviated SHA, description, and history graph of the latest 20 commits
+- `lg`: pretty log`
+- `mine`: show commits made by the current user
+- `rank`: displays committers in descending order of number of commits
+
+### Tags
 
 ### Other
 
+- `cleanup`: clean untracked files and directories
+- `fm`: find commits by commit message
+- `g`: grep
+- `remotes`: list all remotes
 - `snapshot`: stashes changes with a timestamped message and applies it immediately
 - `snapshots`: lists all stashes with their messages
 - `tags`: list all tags
-- `remotes`: list all remotes
 - `track`: set remote upstream
-- `cleanup`: clean untracked files and directories
-- `lg`: pretty log`
-- `hist`: Show history log
-- `g`: grep
-- `mine`: show commits made by the current user
-- `rank`: displays committers in descending order of number of commits
 
 ## Extra
 

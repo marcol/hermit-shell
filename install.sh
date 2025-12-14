@@ -35,12 +35,6 @@ else
   fi
 fi
 
-# Homebrew items (https://brew.sh)
-brew install pygments
-brew install starship
-brew install neovim
-brew install --cask font-fira-code-nerd-font
-
 echo "\nDone!"
 
 unset linkFiles
