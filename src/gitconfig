@@ -41,7 +41,7 @@
   rank = shortlog --numbered --summary --email --no-merges --since='3 months'
 
   # other
-  cleanup = git clean -df && "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+  cleanup = git clean -df
   fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
   g = grep --break --heading --line-number
   remotes = remote -v
