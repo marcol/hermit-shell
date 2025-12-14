@@ -1,38 +1,55 @@
 #!/bin/sh
 
 [alias]
-  br = branch
-  bc = !git checkout -b $1 && git push -u origin
-  bd = !git branch -d $1 && git push origin --delete
-  ci = commit
-  ca = !git add -A && git commit -av
+
+  # common
   co = checkout
-  up = !sh -c 'git pull --rebase --prune && git log --pretty=format:\"%C(yellow)%ae %Creset- %C(blue)%s %Creset(%ar)\" HEAD@{1}..'
   rb = rebase
-  ps = push
-  cp = cherry-pick -x
-  solve = mergetool --tool=vimdiff
   st = status -s -b -unormal
-  tags = tag -l
-  branches = branch -a
-  remotes = remote -v
-  track = "git branch $(git rev-parse --abbrev-ref HEAD) --set-upstream-to origin/$(git rev-parse --abbrev-ref HEAD)"
-  cleanup = git clean -df
-  unstage = reset HEAD
-  uncommit = reset --soft HEAD^
-  undopush = git push -f origin HEAD^:master
-  amend = commit --amend
+  up = !sh -c 'git pull --rebase --prune && git log --pretty=format:\"%C(yellow)%ae %Creset- %C(blue)%s %Creset(%ar)\" HEAD@{1}..'
+
+  # diff
+  dci = !"git --no-pager diff --patch-with-stat origin/$(git rev-parse --abbrev-ref HEAD)..HEAD; echo \"\n---> $(git rev-list --count HEAD origin/$(git rev-parse --abbrev-ref HEAD)...HEAD) commit(s) total\""
   df = diff --color --color-words --abbrev
   dh = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
-  dci = !"git --no-pager diff --patch-with-stat origin/$(git rev-parse --abbrev-ref HEAD)..HEAD; echo \"\n---> $(git rev-list --count HEAD origin/$(git rev-parse --abbrev-ref HEAD)...HEAD) commit(s) total\""
   dlast = diff HEAD^
-  lg = log --color --graph --pretty=format:'%C(yellow)%h%Creset - %C(cyan)%an%Creset %s %Cgreen(%cr) %C(blue)%d%Creset' --abbrev-commit --
-  g = grep --break --heading --line-number
+
+  # commit
+  amend = commit --amend
+  ca = !git add -A && git commit -av
+  ci = commit
+  solve = mergetool --tool=vimdiff
+  uncommit = reset --soft HEAD^
+  unstage = reset HEAD
+
+  # push
+  ps = push
+  undopush = git push -f origin HEAD^:master
+
+  # branches
+  bc = !git checkout -b $1 && git push -u origin
+  bd = !git branch -d $1 && git push origin --delete
+  br = branch
+  branches = branch -a
+
+  # contribution
+  contributors = shortlog --summary --numbered
   hist = log --color --graph --date-order --pretty=format:'[%C(yellow)%h%Creset] %C(cyan)%ci%Creset %C(blue)%an%Creset -%C(yellow)%d%Creset %s %C(dim green)(%cr)%Creset' --abbrev-commit --all
-  rank = shortlog --numbered --summary --email --no-merges --since='3 months'
+  l = log --pretty=oneline -n 20 --graph --abbrev-commit
+  lg = log --color --graph --pretty=format:'%C(yellow)%h%Creset - %C(cyan)%an%Creset %s %Cgreen(%cr) %C(blue)%d%Creset' --abbrev-commit --
   mine = !git log -25 --author="$GIT_AUTHOR_EMAIL" --color --graph --pretty=format:'%C(yellow)%h%Creset - %C(cyan)%an%Creset %s %Cgreen(%cr)' --abbrev-commit --
+  rank = shortlog --numbered --summary --email --no-merges --since='3 months'
+
+  # other
+  cleanup = git clean -df && "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+  g = grep --break --heading --line-number
+  remotes = remote -v
   snapshot = !git stash save "snapshot: $(date)" && git stash apply 'stash@{0}'
   snapshots = !git stash list --grep snapshot
+  tags = tag -l
+  track = "git branch $(git rev-parse --abbrev-ref HEAD) --set-upstream-to origin/$(git rev-parse --abbrev-ref HEAD)"
+
 [color]
   ui = always
 [color "branch"]
