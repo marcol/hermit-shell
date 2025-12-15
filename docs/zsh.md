@@ -2,6 +2,7 @@
 
 ## Aliases
 
+- `cat`- uses [bat](https://github.com/sharkdp/bat) with customization
 - `pip` - alias for pipx
 - `pubkey` - copy public key to clipboard
 - `reload` - reload zsh configuration
