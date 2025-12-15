@@ -42,6 +42,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Alias
 alias git='LANG=en_US.UTF-8 git'
 alias pip='pipx'
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias reload='source "${HOME}/.zshrc" && echo "sourced ${HOME}/.zshrc"'
 alias update="brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g"
 

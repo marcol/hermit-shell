@@ -3,6 +3,7 @@
 ## Aliases
 
 - `pip` - alias for pipx
+- `pubkey` - copy public key to clipboard
 - `reload` - reload zsh configuration
 - `update` - update brew and node
 
