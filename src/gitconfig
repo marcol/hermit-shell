@@ -72,9 +72,6 @@
   old = red
   new  = green
 
-[commit]
-  gpgsign = true
-
 [core]
   attributesfile = ~/.gitattributes
 	editor = nvim
