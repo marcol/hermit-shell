@@ -27,7 +27,11 @@ if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
 fi;
 
 brew install ack
+brew install bat
+brew install fzf
 brew install git
+brew install git-delta
+brew install glow
 brew install grep
 brew install openssh
 brew install pygments
@@ -35,7 +39,6 @@ brew install screen
 brew install starship
 brew install neovim
 brew install vim --with-override-system-vi
-
 brew install --cask font-fira-code-nerd-font
 brew tap bramstein/webfonttools
 brew install sfnt2woff

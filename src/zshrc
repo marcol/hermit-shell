@@ -19,6 +19,7 @@ plugins=(
   brew
   colorize
   common-aliases
+  fzf
   git
   iterm2
   macos
@@ -40,6 +41,7 @@ bindkey "^R" znt-history-widget
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Alias
+alias cat="bat --theme auto:system --theme-dark default --theme-light GitHub"
 alias git='LANG=en_US.UTF-8 git'
 alias pip='pipx'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
