@@ -1,6 +1,6 @@
 {
   "name": "hermit-shell",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "My personal shell configuration.",
   "repository": "https://github.com/marcol/hermit-shell.git",
   "author": "MDL <rhino@pacodacomenda.com>",
