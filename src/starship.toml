@@ -76,7 +76,7 @@ style = "bg:#0087D5 fg:#F1F1F1"
 format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
-symbol = ""
+symbol = "󰎙"
 style = "bg:#0087D5 fg:#F1F1F1"
 version_format = 'v${major}'
 format = '[ $symbol ($version) ]($style)'
@@ -96,9 +96,10 @@ format = '[ $time ]($style)'
 style = 'bg:#AD9E7F fg:#F1F1F1'
 symbol = '[](fg:#AD9E7F bg:#A51024)[](fg:#A51024)'
 success_symbol = '[](fg:#AD9E7F bg:#038603)[](fg:#038603)'
-not_executable_symbol = '[](fg:#AD9E7F bg:#B71D49)[  ](bg:#B71D49)[](fg:#B71D49)'
+not_executable_symbol = '[](fg:#AD9E7F bg:#B71D49)[ 󰜺 ](bg:#B71D49)[](fg:#B71D49)'
 not_found_symbol = '[](fg:#AD9E7F bg:#A51583)[ ? ](bg:#A51583)[](fg:#A51583)'
-sigint_symbol = '[](fg:#AD9E7F bg:#E2A200)[ ⚡](bg:#E2A200)[](fg:#E2A200)'
+sigint_symbol = '[](fg:#AD9E7F bg:#E2A200)[  ](bg:#E2A200)[](fg:#E2A200)'
+signal_symbol = '[](fg:#AD9E7F bg:#0087D5)[ 󰙎 ](bg:#0087D5)[](fg:#0087D5)'
 format = '$symbol '
 map_symbol = true
 disabled = false
