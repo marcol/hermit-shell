@@ -44,5 +44,10 @@ brew tap bramstein/webfonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
+brew install chruby ruby-install
 
 brew cleanup
+
+# ruby
+ruby-install ruby
+gem install colorls
