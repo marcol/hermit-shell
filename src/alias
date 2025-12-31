@@ -9,7 +9,8 @@ alias update="brew update; brew upgrade; brew cleanup; npm update npm -g; npm up
 alias vi="nvim"
 
 alias l="colorls"
-alias la="colorls -a"
-alias ll="colorls -lA"
-alias lt="colorls --tree=2"
-alias lc='colorls -lA --sd'
+alias la="colorls -a --group-directories-first"
+alias ll="colorls -lA --group-directories-first"
+alias lt="colorls --tree=2 --group-directories-first"
+alias lc='colorls -lA --sd --group-directories-first'
+alias lg="colorls --git-status --group-directories-first"
