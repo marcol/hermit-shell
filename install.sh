@@ -2,7 +2,7 @@
 
 function linkFiles() {
 
-  FILES="${ZDOTDIR:-$HOME}/hermit-shell/src/!(*.{fish|toml})"
+  FILES="${ZDOTDIR:-$HOME}/hermit-shell/src/!(*.{fish|toml|yaml})"
 
   echo "\n*** Linking files"
 
@@ -18,6 +18,9 @@ function linkFiles() {
 
   # copy starship configuration
   ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/starship.toml" "${ZDOTDIR:-$HOME}/.config/starship.toml"
+
+  # copy colorls configuration
+  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/colors.yaml" "${ZDOTDIR:-$HOME}/.config/colorls/colors.yaml"
 
   shopt -u extglob
 
