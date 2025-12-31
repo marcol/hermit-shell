@@ -6,7 +6,14 @@
 - `pip` - alias for pipx
 - `pubkey` - copy public key to clipboard
 - `reload` - reload zsh configuration
-- `update` - update brew and node
+- `update` - update brew, node and gem packages
+- `vi` - alias for nvim
+- `l` - list files with colorls
+- `la` - list all files including hidden files with colorls
+- `ll` - list files in long format with human-readable sizes with colorls
+- `lt` - list files in tree format with colorls
+- `lc` - list directories only with colorls
+- `lg` - list files with git status with colorls
 
 ## Oh my shell
 

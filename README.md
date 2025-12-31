@@ -10,13 +10,13 @@ Shell configuration.
 git clone https://github.com/marcol/hermit-shell.git
 ```
 
-2. Run the instalation script install.sh, located in the repository root (`~/hermit-shell/install.sh`):
+1. Run the instalation script install.sh, located in the repository root (`~/hermit-shell/install.sh`):
 
 ```bash
 ./install.sh
 ```
 
-3. Choose the desired shell. Zsh: `chsh -s $(which zsh)`, Fish: `chsh -s "$(command -v fish)"`.
+1. Choose the desired shell. Zsh: `chsh -s $(which zsh)`, Fish: `chsh -s "$(command -v fish)"`.
 
 ### Homebrew items
 
@@ -30,6 +30,10 @@ There are a few packages installed through homebrew (check `install.sh`):
 ### NVChad
 
 You can install NeoVim (i.e. `brew install neovim`) and [NVChad](https://nvchad.com/docs/quickstart/install).
+
+### Colorsls
+
+Colorls is used for colorized `ls` output. You can install it via gem: `gem install colorls`. You may also want to install the [Nerd Fonts](https://www.nerdfonts.com/) version of your preferred font to properly display icons.
 
 ## Documentation
 
