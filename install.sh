@@ -2,7 +2,7 @@
 
 function linkFiles() {
 
-  FILES="${ZDOTDIR:-$HOME}/hermit-shell/src/!(*.{fish|toml|yaml})"
+  # FILES="${ZDOTDIR:-$HOME}/hermit-shell/src/!(*.{fish|toml|yaml})"
   FILES="${ZDOTDIR:-$HOME}/hermit-shell/src/!(config)"
 
   echo "\nLinking files...\n"
