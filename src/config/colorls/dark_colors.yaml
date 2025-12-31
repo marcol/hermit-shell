@@ -1,12 +1,12 @@
 # Main Colors
-unrecognized_file: gold
-recognized_file: yellow
+unrecognized_file: tan
+recognized_file: darkorange
 executable_file: lime
 dir: dodgerblue
 
 # Link
-dead_link: red
-link: cyan
+dead_link: crimson
+link: deepskyblue
 
 # special files
 socket: green
@@ -16,28 +16,28 @@ hidden: burlywood
 hidden_dir: slategray
 
 # Access Modes
-write: darkkhaki
-read: limegreen
+write: tan
+read: green
 exec: red
-no_access: indianred
+no_access: crimson
 
 # Age
-day_old: mediumspringgreen
+day_old: green
 hour_old: lime
-no_modifier: seagreen
+no_modifier: green
 
 # File Size
-file_large: orange
-file_medium: gold
-file_small: peachpuff
+file_large: mediumblue
+file_medium: dodgerblue
+file_small: deepskyblue
 
 # Random
 report: white
-user: moccasin
+user: crimson
 tree: cyan
-empty: yellow
-error: red
-normal: darkkhaki
+empty: darkorange
+error: crimson
+normal: tan
 inode: moccasin
 
 # Git
@@ -46,3 +46,13 @@ modification: darkkhaki
 deletion: darkred
 untracked: darkorange
 unchanged: forestgreen
+# Colors to be used
+## crimson - dark red/rose
+## darkgray
+## darkorange
+## dodgerblue
+## deepskyblue
+## green
+## mediumblue
+## lime
+

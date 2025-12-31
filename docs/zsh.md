@@ -23,6 +23,8 @@
 
 [colorls](https://github.com/athityakumar/colorls) is used to enhance the `ls` command with colors and icons. It requires a few dependencies to be installed first.
 
+The colors are according to [X11](https://en.wikipedia.org/wiki/X11_color_names).
+
 ### Installed plugins
 
 - [brew](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew)
