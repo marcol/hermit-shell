@@ -85,7 +85,7 @@ format = '[ $symbol ($version) ]($style)'
 [python]
 symbol = " "
 style = "bg:#0087D5 fg:#F1F1F1"
-format = '[ $symbol $context ]($style)'
+format = '[ $symbol]($style)'
 
 [time]
 disabled = false
