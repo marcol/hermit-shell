@@ -19,6 +19,10 @@
 
 [Oh my shell](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) is used to manage Plugins.
 
+## Colorls
+
+[colorls](https://github.com/athityakumar/colorls) is used to enhance the `ls` command with colors and icons. It requires a few dependencies to be installed first.
+
 ### Installed plugins
 
 - [brew](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew)
