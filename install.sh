@@ -3,8 +3,9 @@
 function linkFiles() {
 
   FILES="${ZDOTDIR:-$HOME}/hermit-shell/src/!(*.{fish|toml|yaml})"
+  FILES="${ZDOTDIR:-$HOME}/hermit-shell/src/!(config)"
 
-  echo "\n*** Linking files"
+  echo "\nLinking files...\n"
 
   for rcfile in $FILES; do
     if [ -e $rcfile ]; then
@@ -14,13 +15,21 @@ function linkFiles() {
   done
 
   # copy fish configuration
-  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/config.fish" "${ZDOTDIR:-$HOME}/.config/fish/config.fish"
+  echo "Creating symlink for: config.fish"
+  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/config/fish/config.fish" "${ZDOTDIR:-$HOME}/.config/fish/config.fish"
 
   # copy starship configuration
-  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/starship.toml" "${ZDOTDIR:-$HOME}/.config/starship.toml"
+  echo "Creating symlink for: starship.toml"
+  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/config/starship.toml" "${ZDOTDIR:-$HOME}/.config/starship.toml"
 
   # copy colorls configuration
-  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/colors.yaml" "${ZDOTDIR:-$HOME}/.config/colorls/colors.yaml"
+  COLORLSFILES="${ZDOTDIR:-$HOME}/hermit-shell/src/config/colorls/*"
+  for rcfile in $COLORLSFILES; do
+    if [ -e $rcfile ]; then
+      echo "Creating symlink for: "$(basename "$rcfile")
+      ln -fs "$rcfile" "${ZDOTDIR:-$HOME}/.config/colorls/"$(basename "$rcfile")
+    fi
+  done
 
   shopt -u extglob
 
@@ -35,9 +44,10 @@ else
   if [[ $REPLY =~ ^[Yy]$ ]]; then
     shopt -s extglob
     linkFiles
+    echo "\nDone!"
+  else
+    echo "\nAborted."
   fi
 fi
-
-echo "\nDone!"
 
 unset linkFiles
