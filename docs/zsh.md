@@ -12,7 +12,6 @@
 - `la` - list all files including hidden files with colorls
 - `ll` - list files in long format with human-readable sizes with colorls
 - `lt` - list files in tree format with colorls
-- `lc` - list directories only with colorls
 - `lg` - list files with git status with colorls
 
 ## Oh my shell
