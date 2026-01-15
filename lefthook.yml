@@ -24,3 +24,6 @@ pre-commit:
         - lint
       run: yarn run remark {staged_files} --silently-ignore
       glob: "*.md"
+
+output:
+  - summary
