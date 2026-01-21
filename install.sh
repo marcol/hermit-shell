@@ -28,6 +28,10 @@ linkFiles() {
   echo "Creating symlink for: starship.toml"
   ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/config/starship.toml" "${ZDOTDIR:-$HOME}/.config/starship.toml"
 
+  # copy nvim configuration
+  echo "Creating symlink for: nvim"
+  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/config/nvim" "${ZDOTDIR:-$HOME}/.config/nvim"
+
 
   # ensure presence of ~/.config/colorls folder
   DIR="${ZDOTDIR:-$HOME}/.config/colorls"
