@@ -14,6 +14,10 @@
 - `lt` - list files in tree format with colorls
 - `lg` - list files with git status with colorls
 
+## Functions
+
+- `cds` - change directory inside the Projects/Software folder
+
 ## Oh my shell
 
 [Oh my shell](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) is used to manage Plugins.
