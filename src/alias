@@ -3,6 +3,7 @@
 # Improvements to existing commands
 alias cat="bat --theme auto:system --theme-dark default --theme-light GitHub"
 alias git='LANG=en_US.UTF-8 git'
+alias code="codium"
 
 # New useful commands
 alias l="colorls"
