@@ -27,7 +27,7 @@ M.nvdash = {
     "█ █▄▄▄▄▄▄▄▄█",
     "█▄▄▄▄▄▄▄▄▄▄█",
     "",
-    " Powered By  & NvChad ",
+    " Powered By eovim & NvChad ",
     "",
     "",
   },
