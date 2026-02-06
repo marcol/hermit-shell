@@ -1,6 +1,14 @@
 vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup("lsp", { clear = true }),
   callback = function(args)
     local bufnr = args.buf
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = args.buf,
+      callback = function()
+        vim.lsp.buf.format {async = false, id = args.data.client_id }
+      end,
+    })
+
     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 
     if client:supports_method(vim.lsp.protocol.Methods.textDocument_inlineCompletion, bufnr) then
