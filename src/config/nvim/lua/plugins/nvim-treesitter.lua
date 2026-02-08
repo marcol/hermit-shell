@@ -3,6 +3,10 @@ return {
   lazy = false,
   build = ':TSUpdate',
   opts = {
-    ensure_installed = 'latex',
+    ensure_installed = {
+      "markdown",
+      "markdown_inline",
+      "latex"
+    },
   },
 }
