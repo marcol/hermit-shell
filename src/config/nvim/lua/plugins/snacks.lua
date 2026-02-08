@@ -6,7 +6,7 @@ return {
   opts = {
     image = { enabled = true },
     input = {
-      enabled = false,
+      enabled = true,
       icon = " ",
       icon_hl = "SnacksInputIcon",
       icon_pos = "left",
