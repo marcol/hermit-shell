@@ -45,6 +45,7 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 brew install chruby ruby-install
+brew install gemini-cli
 
 brew cleanup
 
