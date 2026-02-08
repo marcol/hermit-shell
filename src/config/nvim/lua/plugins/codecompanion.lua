@@ -10,8 +10,8 @@ return {
   config = function()
     require("codecompanion").setup({
       adapters = {
-        gemini = function()
-          return require("codecompanion.adapters").extend("gemini", {
+        gemini_cli = function()
+          return require("codecompanion.adapters").extend("gemini_cli", {
             env = {
               -- api_key = "GEMINI_API_KEY", -- Or use os.getenv("GEMINI_API_KEY")
               api_key = "cmd:echo $GEMINI_API_KEY"
@@ -28,11 +28,12 @@ return {
         end,
       },
       strategies = {
-        chat = { adapter = "gemini", model = "gemini-3-flash" },
-        inline = { adapter = "gemini", model = "gemini-3-flash" },
-        agent = { adapter = "gemini", model = "gemini-3-flash" },
-        cmd = { adapter = "gemini", model = "gemini-3-flash" },
+        chat = { adapter = "gemini_cli", model = "gemini-3-flash" },
+        inline = { adapter = "gemini_cli", model = "gemini-3-flash" },
+        agent = { adapter = "gemini_cli", model = "gemini-3-flash" },
+        cmd = { adapter = "gemini_cli", model = "gemini-3-flash" },
       },
     })
   end,
 }
+
