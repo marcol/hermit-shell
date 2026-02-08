@@ -3,6 +3,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
+    "hrsh7th/nvim-cmp",
     { "MeanderingProgrammer/render-markdown.nvim", ft = { "markdown", "codecompanion" } }, -- Optional: for pretty chat rendering
   },
   cmd = { "CodeCompanion", "CodeCompanionChat", "CodeCompanionActions" },
@@ -27,20 +28,11 @@ return {
         end,
       },
       strategies = {
-        chat = { adapter = "gemini", mode = "gemini-3-flash" },
-        inline = { adapter = "gemini", mode = "gemini-3-flash" },
-        agent = { adapter = "gemini", mode = "gemini-3-flash" },
-        cmd = { adapter = "gemini", mode = "gemini-3-flash" },
+        chat = { adapter = "gemini", model = "gemini-3-flash" },
+        inline = { adapter = "gemini", model = "gemini-3-flash" },
+        agent = { adapter = "gemini", model = "gemini-3-flash" },
+        cmd = { adapter = "gemini", model = "gemini-3-flash" },
       },
     })
-
-    -- NvChad-style Keybindings
-    local map = vim.keymap.set
-    map({ "n", "v" }, "<leader>ca", "<cmd>CodeCompanionActions<cr>", { desc = "AI Actions" })
-    map({ "n", "v" }, "<leader>cc", "<cmd>CodeCompanionChat Toggle<cr>", { desc = "AI Chat" })
-    map("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { desc = "Add to AI Chat" })
-
-    -- Expand 'cc' into a full command in the command line
-    -- vim.cmd([[cabcc CodeCompanion]])
   end,
 }
