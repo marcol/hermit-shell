@@ -53,8 +53,11 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Alias
 source "${HOME}/.alias"
 
-# Functiona
+# Functions
 source "${HOME}/.functions"
+
+# Load configuration
+test -e "${HOME}/.extra" && source "${HOME}/.extra"
 
 # Starship
 eval "$(starship init zsh)"
