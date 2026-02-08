@@ -11,7 +11,7 @@ export PATH="/usr/libexec/path_helper:$PATH"
 export PATH="/usr/local/texlive/2025/bin/universal-darwin/:$PATH"
 
 # Created by `pipx` on 2025-12-18 08:20:48
-export PATH="$PATH:/Users/marcodiaslopes/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
