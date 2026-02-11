@@ -1,34 +1,40 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 command_timeout = 750
-
 add_newline = true
+palette = "karkinos"
 
 format = """
-[](#282828)\
+[](fg:grey)\
 $os\
-[](bg:#B71D49 fg:#282828)\
+[](bg:cherry fg:grey)\
 $directory\
-[](bg:#A51583 fg:#B71D49)\
+[](bg:fuscia fg:cherry)\
 $git_branch\
 $git_status\
-[](fg:#A51583 bg:#E2A200)\
+[](fg:fuscia bg:yellow)\
 $git_state\
-[](fg:#E2A200 bg:#0087D5)\
+$status\
+
+"""
+
+right_format = """
+[](fg:blue)\
 $c\
+$dart\
 $java\
 $nodejs\
 $python\
-[](fg:#0087D5 bg:#AD9E7F)\
+[](fg:grey bg:blue)\
 $time\
-$status\
+[](fg:grey)
 """
 
 # $git_state\ https://starship.rs/config/#git-state
 # $docker_context\ https://starship.rs/config/#docker-context
 
 [os]
-style = "bg:#282828 fg:#F1F1F1"
+style = "bg:grey fg:white"
 format = '[$symbol]($style)'
 disabled = false
 
@@ -46,63 +52,104 @@ Windows = " "
 Unknown = "? "
 
 [directory]
-style = "bg:#B71D49 fg:#F1F1F1"
+style = "bg:cherry fg:white"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
+[directory.substitutions]
+'~/Projects/Software' = ''
+
 [git_branch]
 symbol = ""
-style = "bg:#A51583 fg:#F1F1F1"
+style = "bg:fuscia fg:white"
 format = '[ $symbol $branch ]($style)'
 truncation_length = 10
 
 [git_status]
-style = "bg:#A51583 fg:#F1F1F1"
-format = '[$all_status$ahead_behind ]($style)'
+style = "bg:fuscia fg:white"
+format = '[$all_status$ahead_behind]($style)'
+conflicted = ' '
+ahead = ' '
+behind = ' '
+diverged = '󰃻 '
+up_to_date = '󰗠 '
+untracked = '󰋗 '
+stashed = '󰆓 '
+modified = ' '
+staged = '[++\($count\)](green)'
+renamed = ' '
+deleted = ' '
 
 [git_state]
-style = "bg:#E2A200 fg:#F1F1F1"
+style = "bg:yellow fg:white"
 
 [c]
 symbol = " "
-style = "bg:#0087D5 fg:#F1F1F1"
-format = '[ $symbol ($version) ]($style)'
+style = "bg:blue fg:white"
+format = "[ $symbol($version) ]($style)"
+version_format = "${major}.${minor}"
 
 [java]
 symbol = " "
-style = "bg:#0087D5 fg:#F1F1F1"
-format = '[ $symbol ($version) ]($style)'
+style = "bg:blue fg:white"
+format = '[ $symbol($version) ]($style)'
+version_format = "${major}.${minor}"
 
 [lua]
 symbol = ""
-style = "bg:#0087D5 fg:#F1F1F1"
-format = '[ $symbol ($version) ]($style)'
+style = "bg:blue fg:white"
+format = '[ $symbol($version) ]($style)'
+version_format = "${major}.${minor}"
 
 [nodejs]
 symbol = "󰎙"
-style = "bg:#0087D5 fg:#F1F1F1"
-format = '[ $symbol ($version) ]($style)'
+style = "bg:blue fg:white"
+format = '[ $symbol($version) ]($style)'
+version_format = "${major}.${minor}"
 
 [python]
 symbol = " "
-style = "bg:#0087D5 fg:#F1F1F1"
-format = '[ $symbol]($style)'
+style = "bg:blue fg:white"
+format = '[ $symbol($version) ]($style)'
+version_format = "${major}.${minor}"
+
+[dart]
+symbol = " "
+style = "bg:blue fg:white"
+format = '[ $symbol($version) ]($style)'
+version_format = "${major}.${minor}"
+
+[ruby]
+symbol = " "
+style = "bg:blue fg:white"
+format = '[ $symbol($version) ]($style)'
+version_format = "${major}.${minor}"
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#AD9E7F fg:#F1F1F1"
-format = '[ $time ]($style)'
+style = "bg:grey fg:white"
+format = '[  $time ]($style)'
 
 [status]
-style = 'bg:#AD9E7F fg:#F1F1F1'
-symbol = '[](fg:#AD9E7F bg:#A51024)[](fg:#A51024)'
-success_symbol = '[](fg:#AD9E7F bg:#038603)[](fg:#038603)'
-not_executable_symbol = '[](fg:#AD9E7F bg:#B71D49)[ 󰜺 ](bg:#B71D49)[](fg:#B71D49)'
-not_found_symbol = '[](fg:#AD9E7F bg:#A51583)[ ? ](bg:#A51583)[](fg:#A51583)'
-sigint_symbol = '[](fg:#AD9E7F bg:#E2A200)[  ](bg:#E2A200)[](fg:#E2A200)'
-signal_symbol = '[](fg:#AD9E7F bg:#0087D5)[ 󰙎 ](bg:#0087D5)[](fg:#0087D5)'
+style = 'bg:yellow fg:white'
+symbol = '[](fg:yellow bg:cherry)[](fg:cherry)'
+success_symbol = '[](fg:yellow bg:green)[](fg:green)'
+not_executable_symbol = '[](fg:yellow bg:cherry)[ 󰜺 ](bg:cherry)[](fg:cherry)'
+not_found_symbol = '[](fg:yellow bg:fuscia)[ ? ](bg:fuscia)[](fg:fuscia)'
+sigint_symbol = '[](fg:yellow bg:yellow)[  ](bg:yellow)[](fg:yellow)'
+signal_symbol = '[](fg:yellow bg:blue)[ 󰙎 ](bg:blue)[](fg:blue)'
 format = '$symbol '
 map_symbol = true
 disabled = false
+
+[palettes.karkinos]
+fuscia = "#A51583"
+cherry = "#B71D49"
+blue = "#0087D5"
+yellow = "#E2A200"
+tan = "#AD9E7F"
+green = "#038603"
+white = "#F1F1F1"
+grey = "#282828"
