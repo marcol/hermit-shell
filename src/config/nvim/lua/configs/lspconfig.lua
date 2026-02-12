@@ -1,11 +1,9 @@
 require("nvchad.configs.lspconfig").defaults()
 
-
 local servers = {
   "arduino-language-server",
   "autotools-language-server",
   "bash-language-server",
-  "copilot",
   "cssls",
   "docker-language-server",
   "emmet-ls",
@@ -35,6 +33,6 @@ vim.lsp.config('pyright', {
 vim.lsp.config('arduino-language-server', {})
 vim.lsp.config('autotools-language-server', {})
 vim.lsp.config('bash-language-server', {})
-vim.lsp.config('docker-language-server', {}) 
+vim.lsp.config('docker-language-server', {})
 vim.lsp.config('emmet-ls', {})
 
