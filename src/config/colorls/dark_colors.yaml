@@ -1,58 +1,49 @@
 # Main Colors
-unrecognized_file: tan
-recognized_file: darkorange
-executable_file: lime
-dir: dodgerblue
+unrecognized_file: '#E2A200'
+recognized_file: '#F1F1F1'
+executable_file: '#04C104'
+dir: '#0087D5'
 
 # Link
-dead_link: crimson
-link: deepskyblue
+dead_link: '#4D4D4D'
+link: '#04C104'
 
 # special files
-socket: green
-blockdev: green
-chardev: green
-hidden: burlywood
-hidden_dir: slategray
+socket: '#04C104'
+blockdev: '#04C104'
+chardev: '#04C104'
+hidden: '#4D4D4D'
+hidden_dir: '#4D4D4D'
 
 # Access Modes
-write: tan
-read: green
-exec: red
-no_access: crimson
+write: '#A51024'
+read: '#A51024' 
+exec: '#A51024'
+no_access: '#F1F1F1' 
 
 # Age
-day_old: green
-hour_old: lime
-no_modifier: green
+hour_old: '#E01631'
+day_old: '#E2A200'
+no_modifier: '#F1F1F1'
 
 # File Size
-file_large: mediumblue
-file_medium: dodgerblue
-file_small: deepskyblue
+file_large: '#E01631'
+file_medium: '#E2A200'
+file_small: '#F1F1F1'
 
 # Random
-report: white
-user: crimson
-tree: cyan
-empty: darkorange
-error: crimson
-normal: tan
-inode: moccasin
+report: '#F1F1F1'
+user: '#A51583'
+tree: '#00BBFF'
+empty: '#FD971F'
+error: '#A51024'
+normal: '#F1F1F1' 
+inode: '#CBB794'
 
 # Git
-addition: chartreuse
-modification: darkkhaki
-deletion: darkred
-untracked: darkorange
-unchanged: forestgreen
-# Colors to be used
-## crimson - dark red/rose
-## darkgray
-## darkorange
-## dodgerblue
-## deepskyblue
-## green
-## mediumblue
-## lime
+addition: '#F4005F'
+modification: '#A51583'
+deletion: '#A51024'
+untracked: '#FD971F'
+unchanged: '#05A505'
 
