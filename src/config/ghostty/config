@@ -1,0 +1,13 @@
+# This is the configuration file for Ghostty.
+font-family = ""
+font-family = "FiraCode Nerd Font Mono Reg"
+font-size = 12
+adjust-cell-height = 10
+
+theme = Monokai Remastered
+
+shell-integration = zsh
+
+# Other information
+# ctrl+shift+, to reload configuration
+# In the CLI, you can run ghostty +show-config --default --docs

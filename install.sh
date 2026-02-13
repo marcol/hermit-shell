@@ -32,6 +32,9 @@ linkFiles() {
   echo "Creating symlink for: nvim"
   ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/config/nvim" "${ZDOTDIR:-$HOME}/.config/nvim"
 
+  # copy ghostty configuration
+  echo "Creating symlink for: ghostty"
+  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/config/ghostty" "${ZDOTDIR:-$HOME}/.config/ghostty"
 
   # ensure presence of ~/.config/colorls folder
   DIR="${ZDOTDIR:-$HOME}/.config/colorls"
@@ -50,7 +53,6 @@ linkFiles() {
   done
 
   # TODO shopt -u extglob
-
 }
 
 # link files
