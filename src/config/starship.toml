@@ -2,7 +2,7 @@
 
 command_timeout = 750
 add_newline = true
-palette = "karkinos"
+palette = "nightowl"
 
 format = """
 [](fg:grey)\
@@ -77,7 +77,7 @@ up_to_date = '󰗠 '
 untracked = '󰋗 '
 stashed = '󰆓 '
 modified = ' '
-staged = '[++\($count\)](green)'
+staged = " "
 renamed = ' '
 deleted = ' '
 
@@ -136,7 +136,7 @@ format = '[  $time ]($style)'
 style = 'bg:yellow fg:white'
 symbol = '[](fg:yellow bg:cherry)[](fg:cherry)'
 success_symbol = '[](fg:yellow bg:green)[](fg:green)'
-not_executable_symbol = '[](fg:yellow bg:cherry)[ 󰜺 ](bg:cherry)[](fg:cherry)'
+not_executable_symbol = '[](fg:yellow bg:red)[ 󰜺 ](bg:red)[](fg:red)'
 not_found_symbol = '[](fg:yellow bg:fuscia)[ ? ](bg:fuscia)[](fg:fuscia)'
 sigint_symbol = '[](fg:yellow bg:yellow)[  ](bg:yellow)[](fg:yellow)'
 signal_symbol = '[](fg:yellow bg:blue)[ 󰙎 ](bg:blue)[](fg:blue)'
@@ -144,12 +144,13 @@ format = '$symbol '
 map_symbol = true
 disabled = false
 
-[palettes.karkinos]
+[palettes.nightowl]
 fuscia = "#A51583"
 cherry = "#B71D49"
 blue = "#0087D5"
 yellow = "#E2A200"
-tan = "#AD9E7F"
-green = "#038603"
+tan = "#CBB794"
+red = "#A51024"
+green = "#05A505"
 white = "#F1F1F1"
 grey = "#282828"
