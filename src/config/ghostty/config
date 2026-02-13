@@ -9,6 +9,9 @@ theme = Monokai Remastered
 cursor-color = "#E2A200"
 cursor-opacity = 0.5
 
+window-height = 50
+window-width = 200
+
 shell-integration = zsh
 
 # Other information
