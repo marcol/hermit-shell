@@ -6,6 +6,9 @@ adjust-cell-height = 10
 
 theme = Monokai Remastered
 
+cursor-color = "#E2A200"
+cursor-opacity = 0.5
+
 shell-integration = zsh
 
 # Other information
