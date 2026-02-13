@@ -87,43 +87,43 @@ style = "bg:yellow fg:white"
 [c]
 symbol = " "
 style = "bg:blue fg:white"
-format = "[ $symbol($version) ]($style)"
+format = "[ $symbol ($version) ]($style)"
 version_format = "${major}.${minor}"
 
 [java]
 symbol = " "
 style = "bg:blue fg:white"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol ($version) ]($style)'
 version_format = "${major}.${minor}"
 
 [lua]
 symbol = ""
 style = "bg:blue fg:white"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol ($version) ]($style)'
 version_format = "${major}.${minor}"
 
 [nodejs]
 symbol = "󰎙"
 style = "bg:blue fg:white"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol ($version) ]($style)'
 version_format = "${major}.${minor}"
 
 [python]
 symbol = " "
 style = "bg:blue fg:white"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol ($version) ]($style)'
 version_format = "${major}.${minor}"
 
 [dart]
 symbol = " "
 style = "bg:blue fg:white"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol ($version) ]($style)'
 version_format = "${major}.${minor}"
 
 [ruby]
 symbol = " "
 style = "bg:blue fg:white"
-format = '[ $symbol($version) ]($style)'
+format = '[ $symbol ($version) ]($style)'
 version_format = "${major}.${minor}"
 
 [time]
