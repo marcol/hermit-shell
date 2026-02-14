@@ -35,11 +35,13 @@ jpg: image
 jxl: image
 odg: image
 png: image
+pxd: image
 pxm: image
 svg: image
 tiff: image
 webp: image
 jar: java
+cjs: js
 mjs: js
 properties: json
 tsx: jsx
