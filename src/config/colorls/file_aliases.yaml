@@ -10,6 +10,9 @@ ogg: audio
 opus: audio
 wav: audio
 editorconfig: conf
+eslintignore: conf
+stylelintignore: conf
+remarkignore: conf
 scss: css
 docx: doc
 gdoc: doc
