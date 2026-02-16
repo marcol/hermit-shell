@@ -38,6 +38,8 @@ brew install pygments
 brew install screen
 brew install starship
 brew install neovim
+brew install tmux
+brew install tpm
 brew install vim --with-override-system-vi
 brew install --cask font-fira-code-nerd-font
 brew tap bramstein/webfonttools
@@ -46,6 +48,7 @@ brew install sfnt2woff-zopfli
 brew install woff2
 brew install chruby ruby-install
 brew install gemini-cli
+brew install zoxide
 
 brew cleanup
 

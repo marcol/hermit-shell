@@ -1,18 +1,20 @@
 # This is the configuration file for Ghostty.
-font-family = ""
+theme = Monokai Remastered
 font-family = "FiraCode Nerd Font Mono Reg"
 font-size = 12
+
 adjust-cell-height = 10
-
-theme = Monokai Remastered
-
-cursor-color = "#E2A200"
+background-opacity = 0.9
+background-blur-radius = 20
 cursor-opacity = 0.5
-
+mouse-hide-while-typing = true
+window-decoration = true
 window-height = 50
 window-width = 200
 
 shell-integration = zsh
+
+keybind = ctrl+enter=unbind
 
 # Other information
 # ctrl+shift+, to reload configuration

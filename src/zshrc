@@ -30,6 +30,7 @@ plugins=(
   nvm
   pip
   yarn
+  zoxide
   zsh-navigation-tools
   zsh-interactive-cd
 )
