@@ -58,7 +58,8 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
-'~/Projects/Software' = ''
+'~/Projects/Software' = ''
+'~' = ''
 
 [git_branch]
 symbol = ""
