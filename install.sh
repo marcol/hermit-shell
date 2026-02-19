@@ -18,6 +18,12 @@ linkFiles() {
         if [ -f "$file" ]; then
             filename=$(basename "$file")
             target="$TARGET_HOME/.$filename"
+            
+            # Skip if already linked correctly
+            if [ "$file" -ef "$target" ]; then
+                continue
+            fi
+            
             echo "Linking: .$filename"
             ln -fs "$file" "$target"
         fi
@@ -37,6 +43,12 @@ linkFiles() {
         # Get relative path from src/config
         rel_path="${file#$SOURCE/config/}"
         target="$CONFIG_DIR/$rel_path"
+        
+        # Skip if already linked correctly
+        if [ "$file" -ef "$target" ]; then
+            continue
+        fi
+        
         target_parent="$(dirname "$target")"
         
         # Ensure target subdirectory exists
@@ -64,4 +76,6 @@ else
         echo "Installation aborted."
     fi
 fi
+
+
 
