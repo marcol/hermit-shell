@@ -1,73 +1,67 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+# Get the absolute path of the directory where this script is located
+REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
+SOURCE="$REPO_ROOT/src"
+
+# Use ZDOTDIR if available, otherwise default to HOME
+TARGET_HOME="${ZDOTDIR:-$HOME}"
+# Use XDG_CONFIG_HOME if available, otherwise default to ~/.config
+CONFIG_DIR="${XDG_CONFIG_HOME:-$TARGET_HOME/.config}"
 
 linkFiles() {
+    echo "Linking top-level dotfiles..."
+    
+    # Link top-level files in src/ to home directory
+    # e.g., src/zshrc -> ~/.zshrc
+    for file in "$SOURCE"/*; do
+        if [ -f "$file" ]; then
+            filename=$(basename "$file")
+            target="$TARGET_HOME/.$filename"
+            echo "Linking: .$filename"
+            ln -fs "$file" "$target"
+        fi
+    done
 
-  FILES="${ZDOTDIR:-$HOME}/hermit-shell/src/*"
-
-  echo "\nLinking files...\n"
-
-  for file in $FILES; do
-    if [ -f $file ]; then
-      echo "Creating symlink for: ."$(basename "$file")
-      ln -fs "$file" "${ZDOTDIR:-$HOME}/."$(basename "$file")
+    echo "\nLinking config files to $CONFIG_DIR..."
+    
+    # Ensure config directory exists
+    if [ ! -d "$CONFIG_DIR" ]; then
+        mkdir -p "$CONFIG_DIR"
+        echo "Created directory: $CONFIG_DIR"
     fi
-  done
-
-  # ensure presence of ~/.config folder
-  DIR="${ZDOTDIR:-$HOME}/.config"
-  if [ ! -d "$DIR" ]; then
-    mkdir -p "$DIR"
-    echo "Had to create .config folder"
-  fi
-
-  # copy fish configuration
-  echo "Creating symlink for: config.fish"
-  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/config/fish/config.fish" "${ZDOTDIR:-$HOME}/.config/fish/config.fish"
-
-  # copy starship configuration
-  echo "Creating symlink for: starship.toml"
-  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/config/starship.toml" "${ZDOTDIR:-$HOME}/.config/starship.toml"
-
-  # copy nvim configuration
-  echo "Creating symlink for: nvim"
-  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/config/nvim" "${ZDOTDIR:-$HOME}/.config/nvim"
-
-  # copy ghostty configuration
-  echo "Creating symlink for: ghostty"
-  ln -fs "${ZDOTDIR:-$HOME}/hermit-shell/src/config/ghostty" "${ZDOTDIR:-$HOME}/.config/ghostty"
-
-  # ensure presence of ~/.config/colorls folder
-  DIR="${ZDOTDIR:-$HOME}/.config/colorls"
-  if [ ! -d "$DIR" ]; then
-    mkdir -p "$DIR"
-    echo "Had to create .config/colorls folder"
-  fi
-
-  # copy colorls configuration
-  COLORLSFILES="${ZDOTDIR:-$HOME}/hermit-shell/src/config/colorls/*"
-  for rcfile in $COLORLSFILES; do
-    if [ -e $rcfile ]; then
-      echo "Creating symlink for: "$(basename "$rcfile")
-      ln -fs "$rcfile" "${ZDOTDIR:-$HOME}/.config/colorls/"$(basename "$rcfile")
-    fi
-  done
-
-  # TODO shopt -u extglob
+    
+    # Link files inside src/config recursively to CONFIG_DIR
+    # This avoids overriding existing folders and only links files
+    find "$SOURCE/config" -type f | while read -r file; do
+        # Get relative path from src/config
+        rel_path="${file#$SOURCE/config/}"
+        target="$CONFIG_DIR/$rel_path"
+        target_parent="$(dirname "$target")"
+        
+        # Ensure target subdirectory exists
+        if [ ! -d "$target_parent" ]; then
+            mkdir -p "$target_parent"
+            echo "Created directory: $target_parent"
+        fi
+        
+        echo "Linking: $rel_path"
+        ln -fs "$file" "$target"
+    done
 }
 
-# link files
-if [ "$1" = "--force" -o "$1" = "-f" ]; then
-  linkFiles
-else
-  read -r -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " answer
-  echo
-  if [ $answer = "Y" -o $answer = "y" ]; then
-    shopt -s extglob
+# Main execution logic
+if [[ "$1" == "--force" || "$1" == "-f" ]]; then
     linkFiles
-    echo "\nInstallaction completed!"
-  else
-    echo "Instalation aborted."
-  fi
+else
+    # Prompt for confirmation
+    read -r -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " answer
+    echo
+    if [[ "$answer" =~ ^[Yy]$ ]]; then
+        linkFiles
+        echo "\nInstallation completed!"
+    else
+        echo "Installation aborted."
+    fi
 fi
 
-unset linkFiles

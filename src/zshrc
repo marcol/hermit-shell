@@ -51,11 +51,11 @@ bindkey "^R" znt-history-widget
 # iTerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# Alias
-source "${HOME}/.alias"
+# Aliasi
+source "${HOME}/.config/shell/alias.zsh"
 
 # Functions
-source "${HOME}/.functions"
+source "${HOME}/.config/shell/functions.zsh"
 
 # Load configuration
 test -e "${HOME}/.extra" && source "${HOME}/.extra"
