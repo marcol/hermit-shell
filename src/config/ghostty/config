@@ -10,11 +10,35 @@ cursor-opacity = 0.5
 mouse-hide-while-typing = true
 window-decoration = true
 window-height = 50
-window-width = 200
+window-width = 201
 
 shell-integration = zsh
 
 keybind = ctrl+enter=unbind
+
+# open/close window/split
+keybind = ctrl+a>n=new_window
+keybind = ctrl+a>s=new_split:down
+keybind = ctrl+a>v=new_split:right
+keybind = ctrl+a>w=close_surface
+keybind = cmd+backquote=toggle_quick_terminal
+
+# jump between splits
+keybind = ctrl+a>up=goto_split:top
+keybind = ctrl+a>k=goto_split:top
+keybind = ctrl+a>down=goto_split:down
+keybind = ctrl+a>j=goto_split:down
+keybind = ctrl+a>left=goto_split:left
+keybind = ctrl+a>h=goto_split:left
+keybind = ctrl+a>right=goto_split:right
+keybind = ctrl+a>l=goto_split:right
+
+# resize split
+keybind = ctrl+shift+up=resize_split:up,10
+keybind = ctrl+shift+down=resize_split:down,10
+keybind = ctrl+shift+right=resize_split:right,10
+keybind = ctrl+shift+left=resize_split:left,10
+keybind = ctrl+a>==equalize_splits
 
 # Other information
 # ctrl+shift+, to reload configuration
