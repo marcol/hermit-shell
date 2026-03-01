@@ -13,27 +13,57 @@ return {
         gemini_cli = function()
           return require("codecompanion.adapters").extend("gemini_cli", {
             env = {
-              -- api_key = "GEMINI_API_KEY", -- Or use os.getenv("GEMINI_API_KEY")
-              api_key = "cmd:echo $GEMINI_API_KEY"
+              GEMINI_API_KEY = os.getenv("GEMINI_API_KEY"),
             },
             schema = {
               model = {
-                default = "gemini-3-flash", -- Uses the latest high-speed model
+                default = "gemini-3.1-pro", -- Latest flagship model (Feb 2026)
               },
               max_output_tokens = {
-                  default = 8192
-              }
+                default = 16384,
+              },
             },
           })
         end,
       },
       strategies = {
-        chat = { adapter = "gemini_cli", model = "gemini-3-flash" },
-        inline = { adapter = "gemini_cli", model = "gemini-3-flash" },
-        agent = { adapter = "gemini_cli", model = "gemini-3-flash" },
-        cmd = { adapter = "gemini_cli", model = "gemini-3-flash" },
+        chat = {
+          adapter = "gemini_cli",
+          model = "gemini-3.1-pro",
+          tools = {
+            ["cmd_runner"] = { enabled = true },
+            ["files"] = { enabled = true },
+          },
+        },
+        inline = {
+          adapter = "gemini_cli",
+          model = "gemini-3.1-pro",
+        },
+        agent = {
+          adapter = "gemini_cli",
+          model = "gemini-3.1-pro",
+        },
+        cmd = {
+          adapter = "gemini_cli",
+          model = "gemini-3.1-pro",
+        },
+      },
+      display = {
+        chat = {
+          show_settings = true,
+          render_distilled = true,
+          window = {
+            layout = "vertical",
+            width = 0.4,
+          },
+        },
+      },
+      opts = {
+        log_level = "DEBUG",
       },
     })
   end,
 }
+
+
 
