@@ -84,6 +84,7 @@ deleted = ' '
 
 [git_state]
 style = "bg:yellow fg:white"
+format = '[ $state \($progress_current/$progress_total\) ]($style)'
 
 [c]
 symbol = " "
