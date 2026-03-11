@@ -2,7 +2,7 @@ return {
   "coffebar/neovim-project",
   opts = {
     projects = { -- define project roots
-      "~/projects/Software/*",
+      "~/Projects/Software/*",
       "~/hermit-shell/",
     },
     picker = {
