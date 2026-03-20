@@ -1,83 +1,82 @@
 #!/bin/sh
 
 [alias]
+    # common
+    co = checkout
+    rb = rebase
+    st = status -s -b -unormal
+    up = !sh -c 'git pull --rebase --prune && git log --pretty=format:\"%C(yellow)%ae %Creset- %C(blue)%s %Creset(%ar)\" HEAD@{1}..'
 
-  # common
-  co = checkout
-  rb = rebase
-  st = status -s -b -unormal
-  up = !sh -c 'git pull --rebase --prune && git log --pretty=format:\"%C(yellow)%ae %Creset- %C(blue)%s %Creset(%ar)\" HEAD@{1}..'
+    # diff
+    dci = !"git --no-pager diff --patch-with-stat origin/$(git rev-parse --abbrev-ref HEAD)..HEAD; echo \"\n---> $(git rev-list --count HEAD origin/$(git rev-parse --abbrev-ref HEAD)...HEAD) commit(s) total\""
+    df = diff
+    dh = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+    dlast = diff HEAD^
 
-  # diff
-  dci = !"git --no-pager diff --patch-with-stat origin/$(git rev-parse --abbrev-ref HEAD)..HEAD; echo \"\n---> $(git rev-list --count HEAD origin/$(git rev-parse --abbrev-ref HEAD)...HEAD) commit(s) total\""
-  df = diff
-  dh = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
-  dlast = diff HEAD^
+    # commit
+    amend = commit --amend
+    ca = !git add -A && git commit -av
+    ci = commit
+    solve = mergetool --tool=vimdiff
+    uncommit = reset --soft HEAD^
+    unstage = reset HEAD
 
-  # commit
-  amend = commit --amend
-  ca = !git add -A && git commit -av
-  ci = commit
-  solve = mergetool --tool=vimdiff
-  uncommit = reset --soft HEAD^
-  unstage = reset HEAD
+    # push
+    ps = push
+    undopush = git push -f origin HEAD^:master
 
-  # push
-  ps = push
-  undopush = git push -f origin HEAD^:master
+    # branches
+    bc = !git checkout -b $1 && git push -u origin
+    bd = !git branch -d $1 && git push origin --delete
+    br = branch
+    branches = branch -a
 
-  # branches
-  bc = !git checkout -b $1 && git push -u origin
-  bd = !git branch -d $1 && git push origin --delete
-  br = branch
-  branches = branch -a
+    # contribution
+    contributors = shortlog --summary --numbered
+    hist = log --color --graph --date-order --pretty=format:'[%C(yellow)%h%Creset] %C(cyan)%ci%Creset %C(blue)%an%Creset -%C(yellow)%d%Creset %s %C(dim green)(%cr)%Creset' --abbrev-commit --all
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+    lg = log --color --graph --pretty=format:'%C(yellow)%h%Creset - %C(cyan)%an%Creset %s %Cgreen(%cr) %C(blue)%d%Creset' --abbrev-commit --
+    mine = !git log -25 --author="$GIT_AUTHOR_EMAIL" --color --graph --pretty=format:'%C(yellow)%h%Creset - %C(cyan)%an%Creset %s %Cgreen(%cr)' --abbrev-commit --
+    rank = shortlog --numbered --summary --email --no-merges --since='3 months'
 
-  # contribution
-  contributors = shortlog --summary --numbered
-  hist = log --color --graph --date-order --pretty=format:'[%C(yellow)%h%Creset] %C(cyan)%ci%Creset %C(blue)%an%Creset -%C(yellow)%d%Creset %s %C(dim green)(%cr)%Creset' --abbrev-commit --all
-  l = log --pretty=oneline -n 20 --graph --abbrev-commit
-  lg = log --color --graph --pretty=format:'%C(yellow)%h%Creset - %C(cyan)%an%Creset %s %Cgreen(%cr) %C(blue)%d%Creset' --abbrev-commit --
-  mine = !git log -25 --author="$GIT_AUTHOR_EMAIL" --color --graph --pretty=format:'%C(yellow)%h%Creset - %C(cyan)%an%Creset %s %Cgreen(%cr)' --abbrev-commit --
-  rank = shortlog --numbered --summary --email --no-merges --since='3 months'
-
-  # other
-  cleanup = git clean -df
-  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
-  g = grep --break --heading --line-number
-  remotes = remote -v
-  snapshot = !git stash save "snapshot: $(date)" && git stash apply 'stash@{0}'
-  snapshots = !git stash list --grep snapshot
-  tags = tag -l
-  track = "git branch $(git rev-parse --abbrev-ref HEAD) --set-upstream-to origin/$(git rev-parse --abbrev-ref HEAD)"
+    # other
+    cleanup = git clean -df
+    fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+    g = grep --break --heading --line-number
+    remotes = remote -v
+    snapshot = !git stash save "snapshot: $(date)" && git stash apply 'stash@{0}'
+    snapshots = !git stash list --grep snapshot
+    tags = tag -l
+    track = "git branch $(git rev-parse --abbrev-ref HEAD) --set-upstream-to origin/$(git rev-parse --abbrev-ref HEAD)"
 
 [branch]
-  autosetuprebase = always
+    autosetuprebase = always
 
 [color]
-  ui = auto
+    ui = auto
 
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 
 [color "diff"]
-  meta = yellow
-  frag = magenta
-  old = red
-  new  = green
+    meta = yellow
+    frag = magenta
+    old = red
+    new  = green
 
 [core]
-  attributesfile = ~/.gitattributes
-	editor = nvim
-  excludesfile = ~/.gitignore
-  pager = delta
-  whitespace = space-before-tab,indent-with-non-tab,trailing-space
+    attributesfile = ~/.gitattributes
+    editor = nvim
+    excludesfile = ~/.gitignore
+    pager = delta
+    whitespace = space-before-tab,indent-with-non-tab,trailing-space
 
 [delta]
     navigate = true  # use n and N to move between diff sections
@@ -86,32 +85,32 @@
 [diff]
   # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
   # instead of a/b/c/d as prefixes for patches
-  mnemonicprefix = true
-  algorithm = patience
-  new = green
+    mnemonicprefix = true
+    algorithm = patience
+    new = green
 
 [init]
-  defaultBranch = main
+    defaultBranch = main
 
 [interactive]
     diffFilter = delta --color-only
 
 [mergetool "vimdiff"]
-  cmd = vim -d "$LOCAL" "$MERGED" "$REMOTE"
-  trustExitCode = true
+    cmd = vim -d "$LOCAL" "$MERGED" "$REMOTE"
+    trustExitCode = true
 
 [merge]
-  conflictStyle = zdiff3
-  log = true
-  summary = true
-  verbosity = 1
-  tool = vimdiff
+    conflictStyle = zdiff3
+    log = true
+    summary = true
+    verbosity = 1
+    tool = vimdiff
 
 [push]
-  default = simple
+    default = simple
 
 [include]
-  path = ~/.gitconfig-extra
+    path = ~/.gitconfig-extra
 
 [init]
 	defaultBranch = main
