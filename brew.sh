@@ -38,6 +38,7 @@ brew install pygments
 brew install screen
 brew install starship
 brew install neovim
+brew install tldr
 brew install tmux
 brew install tpm
 brew install vim --with-override-system-vi
