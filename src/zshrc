@@ -25,7 +25,6 @@ plugins=(
   common-aliases
   fzf
   git
-  iterm2
   macos
   nvm
   pip
@@ -56,6 +55,9 @@ source "${HOME}/.config/shell/alias.zsh"
 
 # Functions
 source "${HOME}/.config/shell/functions.zsh"
+
+# Editor
+export EDITOR="code --wait"
 
 # Load configuration
 test -e "${HOME}/.extra" && source "${HOME}/.extra"
