@@ -3,26 +3,27 @@
   "provider": {
     "google": {
       "options": {
-        "thinking": "medium"
+        "thinking": "low"
       }
     },
     "ollama": {
       "options": {
-        "baseURL": "http://localhost:11434/v1"
+        "baseURL": "http://localhost:11434/v1",
+        "apiKey": "{env:OLLAMA_API_KEY}"
       },
       "models": {
-        "qwen3": {
-          "id": "qwen3-coder:latest"
+        "qwen3-coder": {
+          "id": "qwen3-coder-next:cloud"
         }
       }
     }
   },
   "agent": {
     "plan": {
-      "model": "google/gemini-3.1-flash-preview"
+      "model": "google/gemini-flash-latest"
     },
     "build": {
-      "model": "ollama/qwen3"
+      "model": "ollama/qwen3-coder"
     }
   },
   "default_agent": "plan"
