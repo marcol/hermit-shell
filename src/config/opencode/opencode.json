@@ -1,30 +1,55 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "provider": {
-    "google": {
-      "options": {
-        "thinking": "low"
-      }
-    },
-    "ollama": {
-      "options": {
-        "baseURL": "http://localhost:11434/v1",
-        "apiKey": "{env:OLLAMA_API_KEY}"
-      },
-      "models": {
-        "qwen3-coder": {
-          "id": "qwen3-coder-next:cloud"
+    "$schema": "https://opencode.ai/config.json",
+    "provider": {
+        "google": {
+            "name": "by Google",
+            "options": {
+                "apiKey": "{env:GEMINI_API_KEY}",
+                "thinkingConfig": {
+                    "thinkingLevel": "high",
+                    "includeThoughts": true
+                }
+            },
+            "models": {
+                "flash": {
+                    "id": "gemini-flash-latest",
+                    "name": "Gemini Flash"
+                },
+                "lite": {
+                    "id": "gemini-flash-lite-latest",
+                    "name": "Gemini Flash Lite"
+                },
+                "gemini": {
+                    "id": "gemini-3.1-pro-preview",
+                    "name": "Gemini Pro"
+                },
+                "nano": {
+                    "id": "gemini-3.1-flash-image-preview",
+                    "name": "Nano Banana"
+                }
+            }
+        },
+        "ollama": {
+            "name": "by Ollama",
+            "options": {
+                "baseURL": "http://localhost:11434/v1",
+                "apiKey": "{env:OLLAMA_API_KEY}"
+            },
+            "models": {
+                "qwen3-coder": {
+                    "id": "qwen3-coder-next:cloud",
+                    "name": "Qwen 3 Coder"
+                },
+                "glm": {
+                    "id": "glm-5.1:cloud",
+                    "name": "GLM5"
+                },
+                "gemma4": {
+                    "id": "gemma4:latest",
+                    "name": "Gemma 4"
+                }
+            }
         }
-      }
-    }
-  },
-  "agent": {
-    "plan": {
-      "model": "google/gemini-flash-latest"
     },
-    "build": {
-      "model": "ollama/qwen3-coder"
-    }
-  },
-  "default_agent": "plan"
+    "default_agent": "plan"
 }
