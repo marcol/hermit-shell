@@ -12,6 +12,10 @@
                 }
             },
             "models": {
+                "gemma": {
+                    "id": "gemma-4-31b-it",
+                    "name": "Gemma 4 31b"
+                },
                 "flash": {
                     "id": "gemini-flash-latest",
                     "name": "Gemini Flash"

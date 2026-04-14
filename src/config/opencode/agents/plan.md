@@ -3,7 +3,7 @@ name: plan
 description: 'Architectural planning and step-by-step task breakdown.'
 mode: primary
 # model: google/lite
-model: google/gemma-4-31b-it
+model: google/gemma
 temperature: 0.25
 model_reasoning_effort: high
 skills:
