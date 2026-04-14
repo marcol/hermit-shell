@@ -1,5 +1,6 @@
 {
     "$schema": "https://opencode.ai/config.json",
+    "autoupdate": true,
     "provider": {
         "google": {
             "name": "by Google",
@@ -39,6 +40,10 @@
                 "qwen3-coder": {
                     "id": "qwen3-coder-next:cloud",
                     "name": "Qwen 3 Coder"
+                },
+                "qwen3.5": {
+                    "id": "qwen3.5:latest",
+                    "name": "Qwen 3.5"
                 },
                 "glm": {
                     "id": "glm-5.1:cloud",

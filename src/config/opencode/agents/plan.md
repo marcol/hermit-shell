@@ -5,10 +5,17 @@ mode: primary
 temperature: 0.1
 skills:
     - astro
-    - docs-writer
+    - create-readme
+    - data-visualization
+    - documentation-writer
+    - find-skills
     - frontend-design
+    - frontend-skill
     - modern-javascript-patterns
     - tailwind-design-system
+    - security-best-practices
+    - skill-creator
+    - web-design-guidelines
 tools:
     bash: true
     read: true

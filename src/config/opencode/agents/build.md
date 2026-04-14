@@ -1,11 +1,14 @@
 ---
-model: ollama/glm
+model: ollama/qwen3.5
 description: 'Implementation of features, articles, and data structure updates.'
 mode: primary
 temperature: 0.1
 skills:
     - astro
+    - docs-writer
+    - frontend-skill
     - modern-javascript-patterns
+    - security-best-practices
     - tailwind-design-system
 tools:
     bash: true
