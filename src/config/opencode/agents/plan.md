@@ -1,7 +1,8 @@
 ---
-model: google/lite
+name: planner
 description: 'Architectural planning and step-by-step task breakdown.'
 mode: primary
+model: google/lite
 temperature: 0.1
 skills:
     - astro
