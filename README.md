@@ -68,3 +68,4 @@ Common types: `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`,
 - [remark-preset-lint-recommended](https://www.npmjs.com/package/remark-preset-lint-recommended)
 - [commitlint](https://www.npmjs.com/package/@commitlint/cli)
 - [lefthook](https://www.npmjs.com/package/lefthook)
+Added atheme for testing
