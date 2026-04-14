@@ -5,6 +5,11 @@ mode: subagent
 model: inherit
 temperature: 0.1
 skills:
+    - e2e-testing-patterns
+    - javascript-testing-patterns
+    - playwright-best-practices
+    - python-testing-patterns
+    - webapp-testing
 tools:
     read: true
     write: true

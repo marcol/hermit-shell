@@ -1,5 +1,5 @@
 ---
-name: builder
+name: build
 description: 'Implementation of features, articles, and data structure updates.'
 mode: primary
 model: ollama/qwen3.5

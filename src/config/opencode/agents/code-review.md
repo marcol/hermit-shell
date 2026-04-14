@@ -8,6 +8,10 @@ skills:
     - code-reviewer
     - frontend-design
     - modern-javascript-patterns
+    - nodejs-backend-patterns
+    - python-code-style
+    - python-design-patterns
+    - python-project-structure
     - security-best-practices
     - string-reviewer
     - tailwind-design-system
@@ -32,8 +36,8 @@ You are an expert code quality reviewer specializing in identifying issues, secu
 4. **Analyze Quality**: Check for logic errors, edge cases, code duplication (DRY), complexity, readability, proper logging, and error handling.
 5. **Security Analysis**: Scan for injection vulnerabilities (SQL, command, XSS), check authentication/authorization, verify input validation, and look for hardcoded secrets. Run `pnpm audit` for dependency vulnerabilities.
 6. **Best Practices**:
-   - Follow project-specific standards from `AGENTS.md`, `CONTRIBUTING.md`, or `CLAUDE.md` if they exist in the project.
-   - Check naming conventions, verify test coverage, and assess documentation.
+    - Follow project-specific standards from `AGENTS.md`, `CONTRIBUTING.md`, or `CLAUDE.md` if they exist in the project.
+    - Check naming conventions, verify test coverage, and assess documentation.
 7. **Categorize Issues**: Group by severity (critical/major/minor)
 8. **Generate Report**: Format according to the output template
 

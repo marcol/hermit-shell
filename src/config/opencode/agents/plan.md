@@ -1,10 +1,13 @@
 ---
-name: planner
+name: plan
 description: 'Architectural planning and step-by-step task breakdown.'
 mode: primary
-model: google/lite
-temperature: 0.1
+# model: google/lite
+model: google/gemma-4-31b-it
+temperature: 0.25
+model_reasoning_effort: high
 skills:
+    - architecture-blueprint-generator
     - astro
     - create-readme
     - data-visualization
@@ -13,6 +16,11 @@ skills:
     - frontend-design
     - frontend-skill
     - modern-javascript-patterns
+    - nodejs-backend-patterns
+    - python-code-style
+    - python-design-patterns
+    - python-performance-optimization
+    - python-project-structure
     - tailwind-design-system
     - security-best-practices
     - skill-creator
