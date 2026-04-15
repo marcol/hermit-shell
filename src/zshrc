@@ -64,3 +64,6 @@ test -e "${HOME}/.extra" && source "${HOME}/.extra"
 
 # Starship
 eval "$(starship init zsh)"
+
+# Added by Antigravity
+export PATH="/Users/marcodiaslopes/.antigravity/antigravity/bin:$PATH"
