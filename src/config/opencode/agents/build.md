@@ -2,7 +2,7 @@
 name: build
 description: 'Implementation of features, articles, and data structure updates.'
 mode: primary
-model: ollama/qwen3.5
+model: ollama/qwen
 temperature: 0.1
 skills:
     - astro

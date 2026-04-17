@@ -41,21 +41,17 @@
                 "apiKey": "{env:OLLAMA_API_KEY}"
             },
             "models": {
-                "qwen3-coder": {
+                "qwen-coder": {
                     "id": "qwen3-coder-next:cloud",
                     "name": "Qwen 3 Coder"
                 },
-                "qwen3.5": {
-                    "id": "qwen3.5:latest",
-                    "name": "Qwen 3.5"
+                "qwen": {
+                    "id": "qwen3.6:latest",
+                    "name": "Qwen 3.6"
                 },
                 "glm": {
                     "id": "glm-5.1:cloud",
                     "name": "GLM5"
-                },
-                "gemma4": {
-                    "id": "gemma4:latest",
-                    "name": "Gemma 4"
                 }
             }
         }
