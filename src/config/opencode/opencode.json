@@ -45,13 +45,17 @@
                     "id": "qwen3-coder-next:cloud",
                     "name": "Qwen 3 Coder"
                 },
-                "qwen": {
+                "qwen:local": {
                     "id": "qwen3.6:latest",
                     "name": "Qwen 3.6"
                 },
                 "glm": {
                     "id": "glm-5.1:cloud",
                     "name": "GLM5"
+                },
+                "kimi": {
+                    "id": "kimi-k2.6:cloud",
+                    "name": "Kimi"
                 }
             }
         }
