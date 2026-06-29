@@ -25,7 +25,7 @@
                     "name": "Gemini Flash Lite"
                 },
                 "gemini": {
-                    "id": "gemini-3.1-pro-preview",
+                    "id": "gemini-3-pro-preview",
                     "name": "Gemini Pro"
                 },
                 "nano": {
@@ -50,7 +50,7 @@
                     "name": "Qwen 3.6"
                 },
                 "glm": {
-                    "id": "glm-5.1:cloud",
+                    "id": "glm-5.2:cloud",
                     "name": "GLM5"
                 },
                 "kimi": {
