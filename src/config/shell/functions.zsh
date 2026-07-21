@@ -3,7 +3,7 @@ cds() {
   cd $HOME/Projects/Software/$folder && ll
 }
 
-update-rpi() {
+update-raspi() {
     echo "\n=== Updating Package Lists ==="
     sudo apt update || return 1
 
