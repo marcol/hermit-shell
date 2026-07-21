@@ -13,6 +13,7 @@ window-height = 50
 window-width = 201
 
 shell-integration = zsh
+shell-integration-features = ssh-terminfo
 
 # keybinds https://ghostty.org/docs/config/keybind
 keybind = ctrl+enter=unbind
