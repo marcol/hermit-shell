@@ -39,7 +39,6 @@ source $ZSH/oh-my-zsh.sh
 # chruby
 source "$(brew --prefix)/opt/chruby/share/chruby/chruby.sh"
 source "$(brew --prefix)/opt/chruby/share/chruby/auto.sh"
-
 chruby ruby-4.0.0
 
 # Navigation tools

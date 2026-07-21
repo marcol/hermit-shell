@@ -18,3 +18,6 @@ alias reload='source "${HOME}/.zshrc" && echo "sourced ${HOME}/.zshrc"'
 alias update="brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; gem update --system"
 alias vi="nvim"
 alias edit="nvim"
+
+# Raspberry PI
+alias raspi="ssh marco@raspberrypi.local"
