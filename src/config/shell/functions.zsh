@@ -3,7 +3,11 @@ cds() {
   cd $HOME/Projects/Software/$folder && ll
 }
 
-update-raspi() {
+watch() {
+  ls "$1" | entr python3 "$1"
+}
+
+update-pi() {
     echo "\n=== Updating Package Lists ==="
     sudo apt update || return 1
 
