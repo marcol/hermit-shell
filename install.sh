@@ -36,6 +36,10 @@ linkFiles() {
         mkdir -p "$CONFIG_DIR"
         echo "Created directory: $CONFIG_DIR"
     fi
+
+    # Link agents folder
+    echo "\nLinking agents"
+    ln -fs "$SOURCE/agents" "$TARGET_HOME/.agents"
     
     # Link files inside src/config recursively to CONFIG_DIR
     # This avoids overriding existing folders and only links files
