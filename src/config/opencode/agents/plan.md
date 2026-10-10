@@ -10,7 +10,6 @@ skills:
     - astro
     - create-readme
     - data-visualization
-    - documentation-writer
     - find-skills
     - frontend-design
     - frontend-skill
