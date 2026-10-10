@@ -6,9 +6,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel-labs/skills.git",
       "skillPath": "skills/find-skills/SKILL.md",
-      "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
       "installedAt": "2026-04-09T13:09:31.904Z",
-      "updatedAt": "2026-04-13T20:11:39.116Z"
+      "updatedAt": "2026-10-10T19:16:05.770Z"
     },
     "architecture-blueprint-generator": {
       "source": "github/awesome-copilot",
@@ -24,47 +24,45 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/wshobson/agents.git",
       "skillPath": "plugins/javascript-typescript/skills/modern-javascript-patterns/SKILL.md",
-      "skillFolderHash": "4495f3ffa0a01a57e134a13afce515b5a8754c1f",
+      "skillFolderHash": "c776b27884a496ae6fd0f5caaba199218b2b3916",
       "installedAt": "2026-04-13T19:44:10.217Z",
-      "updatedAt": "2026-04-13T19:44:10.217Z"
+      "updatedAt": "2026-10-10T19:16:08.515Z"
     },
     "tailwind-design-system": {
       "source": "wshobson/agents",
       "sourceType": "github",
       "sourceUrl": "https://github.com/wshobson/agents.git",
       "skillPath": "plugins/frontend-mobile-development/skills/tailwind-design-system/SKILL.md",
-      "skillFolderHash": "a8532caa4b6284a92c686bc9346c274e6e66aaa5",
+      "skillFolderHash": "9bafb7de1588c90d88f224950b098731973a8254",
       "installedAt": "2026-04-13T19:44:59.997Z",
-      "updatedAt": "2026-04-13T19:44:59.997Z"
+      "updatedAt": "2026-10-10T19:16:10.731Z"
     },
     "docs-writer": {
       "source": "google-gemini/gemini-cli",
       "sourceType": "github",
       "sourceUrl": "https://github.com/google-gemini/gemini-cli.git",
       "skillPath": ".gemini/skills/docs-writer/SKILL.md",
-      "skillFolderHash": "2ca49455dc4fa1dae5e85f8f4325faf69de63f11",
+      "skillFolderHash": "965430eb30db71717126393d7cb45ec64dd845e5",
       "installedAt": "2026-04-13T19:45:45.752Z",
-      "updatedAt": "2026-04-13T19:45:45.752Z"
+      "updatedAt": "2026-10-10T19:16:25.334Z"
     },
     "frontend-design": {
       "source": "anthropics/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/frontend-design/SKILL.md",
-      "skillFolderHash": "928950704df8a8b885c03de5da626331e6f29cf8",
-      "pluginName": "example-skills",
+      "skillFolderHash": "d79e2a5bb4df4a386c2adcdd9ab8709bba28c3f6",
       "installedAt": "2026-04-13T19:46:12.779Z",
-      "updatedAt": "2026-04-13T19:46:12.779Z"
+      "updatedAt": "2026-10-10T19:16:26.829Z"
     },
     "skill-creator": {
       "source": "anthropics/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/skill-creator/SKILL.md",
-      "skillFolderHash": "98a510d1cfef9f82c3b1eec200229ca68725e613",
-      "pluginName": "example-skills",
+      "skillFolderHash": "3cf9a8db32597ba3e24b584a3d696f4e11c7d7b6",
       "installedAt": "2026-04-13T19:46:59.740Z",
-      "updatedAt": "2026-04-13T19:46:59.740Z"
+      "updatedAt": "2026-10-10T19:16:28.325Z"
     },
     "data-visualization": {
       "source": "anthropics/knowledge-work-plugins",
@@ -83,15 +81,6 @@
       "skillFolderHash": "349d45885fd3e432e7d0e5c6e21a2a712db158ef",
       "installedAt": "2026-04-13T20:13:42.217Z",
       "updatedAt": "2026-04-13T20:13:42.217Z"
-    },
-    "frontend-skill": {
-      "source": "openai/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/openai/skills.git",
-      "skillPath": "skills/.curated/frontend-skill/SKILL.md",
-      "skillFolderHash": "8d2160222d05058efd40179672343422b67685a6",
-      "installedAt": "2026-04-13T20:14:45.403Z",
-      "updatedAt": "2026-04-13T20:14:45.403Z"
     },
     "string-reviewer": {
       "source": "google-gemini/gemini-cli",
@@ -134,18 +123,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/wshobson/agents.git",
       "skillPath": "plugins/python-development/skills/python-performance-optimization/SKILL.md",
-      "skillFolderHash": "f0e64087a8f9685ef5d394b03aefa1dc0accd65a",
+      "skillFolderHash": "f7d93ea51a12291d0a120dfb9db300c87d8750f6",
       "installedAt": "2026-04-14T14:33:32.904Z",
-      "updatedAt": "2026-04-14T14:33:32.904Z"
+      "updatedAt": "2026-10-10T19:16:13.124Z"
     },
     "python-design-patterns": {
       "source": "wshobson/agents",
       "sourceType": "github",
       "sourceUrl": "https://github.com/wshobson/agents.git",
       "skillPath": "plugins/python-development/skills/python-design-patterns/SKILL.md",
-      "skillFolderHash": "d14f37b9654a3e70b1efa2ceae5b9b3bb706d46e",
+      "skillFolderHash": "dabf99bc85ef98de1d4d130286f1a4c1087f65a3",
       "installedAt": "2026-04-14T14:33:47.321Z",
-      "updatedAt": "2026-04-14T14:33:47.321Z"
+      "updatedAt": "2026-10-10T19:16:15.292Z"
     },
     "python-code-style": {
       "source": "wshobson/agents",
@@ -170,27 +159,27 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/wshobson/agents.git",
       "skillPath": "plugins/javascript-typescript/skills/nodejs-backend-patterns/SKILL.md",
-      "skillFolderHash": "079c9e24dc821881da383213c07fdbb51f04728c",
+      "skillFolderHash": "19e2f19840540776ebc45276762e98f4977db7f4",
       "installedAt": "2026-04-14T14:35:04.307Z",
-      "updatedAt": "2026-04-14T14:35:04.307Z"
+      "updatedAt": "2026-10-10T19:16:17.576Z"
     },
     "python-testing-patterns": {
       "source": "wshobson/agents",
       "sourceType": "github",
       "sourceUrl": "https://github.com/wshobson/agents.git",
       "skillPath": "plugins/python-development/skills/python-testing-patterns/SKILL.md",
-      "skillFolderHash": "28ce19935b2b48708af69e47e7686936a249c08b",
+      "skillFolderHash": "87259b0b73d75b3500405c1224fdda5b3263d308",
       "installedAt": "2026-04-14T14:35:50.901Z",
-      "updatedAt": "2026-04-14T14:35:50.901Z"
+      "updatedAt": "2026-10-10T19:16:19.549Z"
     },
     "e2e-testing-patterns": {
       "source": "wshobson/agents",
       "sourceType": "github",
       "sourceUrl": "https://github.com/wshobson/agents.git",
       "skillPath": "plugins/developer-essentials/skills/e2e-testing-patterns/SKILL.md",
-      "skillFolderHash": "364920ae1754341eeec99c913383ec437ea264ea",
+      "skillFolderHash": "9b40c3a3e6e9ad28ec2d9ea1c19ecf7e8b7e33fc",
       "installedAt": "2026-04-14T17:47:01.644Z",
-      "updatedAt": "2026-04-14T17:47:01.644Z"
+      "updatedAt": "2026-10-10T19:16:21.532Z"
     },
     "javascript-testing-patterns": {
       "source": "wshobson/agents",
@@ -205,20 +194,19 @@
       "source": "currents-dev/playwright-best-practices-skill",
       "sourceType": "github",
       "sourceUrl": "https://github.com/currents-dev/playwright-best-practices-skill.git",
-      "skillPath": "SKILL.md",
-      "skillFolderHash": "ef329e7e65149918e1ff0eed2cf7d2e6e6f9eb5b",
+      "skillPath": "playwright-best-practices/SKILL.md",
+      "skillFolderHash": "b4620eb2cfc6b58173cda800b7c7578190dfd632",
       "installedAt": "2026-04-14T17:48:29.809Z",
-      "updatedAt": "2026-04-14T17:48:29.809Z"
+      "updatedAt": "2026-10-10T19:16:32.170Z"
     },
     "webapp-testing": {
       "source": "anthropics/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/webapp-testing/SKILL.md",
-      "skillFolderHash": "74cb751576f9e9af2aedff47e67861ef26db2dc4",
-      "pluginName": "example-skills",
+      "skillFolderHash": "5ffb7dc66b9fd4c25c3e400a4c00da99a349b714",
       "installedAt": "2026-04-14T17:49:27.023Z",
-      "updatedAt": "2026-04-14T17:49:27.023Z"
+      "updatedAt": "2026-10-10T19:16:30.174Z"
     },
     "git-commit": {
       "source": "github/awesome-copilot",
@@ -237,6 +225,15 @@
       "skillFolderHash": "b2cd0fc490586e7706c28cde839108cf3a568b72",
       "installedAt": "2026-08-28T15:12:25.519Z",
       "updatedAt": "2026-08-28T15:12:25.519Z"
+    },
+    "documentation-writer": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/documentation-writer/SKILL.md",
+      "skillFolderHash": "016d8040a3f91c8360b1003e74fbf29f34c283f5",
+      "installedAt": "2026-10-10T19:19:59.412Z",
+      "updatedAt": "2026-10-10T19:19:59.412Z"
     }
   },
   "dismissed": {
@@ -244,16 +241,16 @@
   },
   "lastSelectedAgents": [
     "amp",
-    "antigravity",
-    "antigravity-cli",
     "cline",
     "codex",
     "cursor",
-    "deepagents",
+    "droid",
     "gemini-cli",
     "github-copilot",
+    "kilo",
     "kimi-code-cli",
     "opencode",
+    "pi",
     "warp",
     "zed"
   ]
