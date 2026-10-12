@@ -17,32 +17,20 @@
                     "name": "Gemma 4 31b"
                 },
                 "flash": {
-                    "id": "gemini-3.8-flash",
+                    "id": "gemini-flash-latest",
                     "name": "Gemini Flash"
                 },
+                "lite": {
+                    "id": "gemini-flash-lite-latest",
+                    "name": "Gemini Flash Lite"
+                },
                 "gemini": {
-                    "id": "gemini-3.8-live-extended-thinking",
-                    "name": "Gemini Thinking"
+                    "id": "gemini-3-pro-preview",
+                    "name": "Gemini Pro"
                 },
                 "nano": {
-                    "id": "gemini-nano-banana-2.1",
+                    "id": "gemini-3.1-flash-image-preview",
                     "name": "Nano Banana"
-                }
-            }
-        },
-        "deepseek": {
-            "models": {
-                "settings": {
-                    "baseURL": "https://api.deepseek.com/v1",
-                    "apiKey": "sk-acd6f1ffb6e7469ab4ebc3790dcea446"
-                },
-                "deepseek-r1": {
-                    "name": "DeepSeek R1",
-                    "modelID": "deepseek-reasoner"
-                },
-                "deepseek-v4.1-flash": {
-                    "name": "DeepSeek V4.1 Flash",
-                    "modelID": "deepseek-v4.1-flash"
                 }
             }
         },
@@ -53,17 +41,21 @@
                 "apiKey": "{env:OLLAMA_API_KEY}"
             },
             "models": {
+                "qwen-coder": {
+                    "id": "qwen3-coder-next:cloud",
+                    "name": "Qwen 3 Coder"
+                },
                 "qwen:local": {
-                    "id": "qwen3.8:latest",
-                    "name": "Qwen"
+                    "id": "qwen3.6:latest",
+                    "name": "Qwen 3.6"
                 },
-                "qwen-code:local": {
-                    "id": "qwen3-coder:latest",
-                    "name": "Qwen-code"
+                "glm": {
+                    "id": "glm-5.2:cloud",
+                    "name": "GLM5"
                 },
-                "glm-ocr:local": {
-                    "id": "glm-ocr:latest",
-                    "name": "GLM"
+                "kimi": {
+                    "id": "kimi-k2.6:cloud",
+                    "name": "Kimi"
                 }
             }
         }

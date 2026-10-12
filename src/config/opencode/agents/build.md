@@ -2,11 +2,12 @@
 name: build
 description: 'Implementation of features, articles, and data structure updates.'
 mode: primary
-model: ollama/qwen-code:local
+model: ollama/glm
 temperature: 0.1
 skills:
     - astro
     - docs-writer
+    - frontend-skill
     - modern-javascript-patterns
     - security-best-practices
     - tailwind-design-system
@@ -15,6 +16,7 @@ tools:
     read: true
     edit: true
     write: true
+
 ---
 
 # Build Agent
