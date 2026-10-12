@@ -1,71 +1,103 @@
 # hermit-shell
 
-Shell configuration.
+A collection of shell configurations and tools that enhance the development experience, particularly for AI-assisted coding workflows.
 
-## Instalation
+## Overview
 
-1. Clone the repository on your home directory, i.e. `cd ~`:
+This repository contains a comprehensive set of shell configurations, aliases, functions, and tools designed to streamline development tasks. It particularly emphasizes integration with AI services like Claude, Gemini, DeepSeek, and Ollama for enhanced productivity.
+
+## Key Features
+
+- **Enhanced Shell Experience**: Custom zsh configurations with helpful aliases and functions
+- **AI Integration**: Tools for interacting with various AI platforms including Claude, Gemini, DeepSeek, and Ollama
+- **Convenient Utilities**: Scripts and functions for common development tasks like directory navigation
+- **Configuration Management**: Automated installation scripts for setting up your environment
+
+## Repository Structure
 
 ```bash
-git clone https://github.com/marcol/hermit-shell.git
+.
+├── src/
+│   ├── agents/                    # AI agent configurations
+│   │   └── skills/                # Various agent skills, including security-best-practices
+│   ├── bashrc                     # Bash configuration (symlinked)
+│   ├── config/                    # Configuration files for various tools
+│   │   ├── colorls/               # Colorls configuration
+│   │   ├── fish/                  # Fish shell configuration
+│   │   ├── ghostty/               # Ghostty terminal configuration  
+│   │   ├── nvim/                  # Neovim configuration
+│   │   ├── opencode/              # Opencode configuration
+│   │   ├── shell/                 # Shell configuration (aliases and functions)
+│   │   └── tmux/                  # Tmux configuration
+│   ├── inputrc                    # Readline configuration
+│   ├── prettierrc                 # Prettier configuration
+│   ├── zshrc                      # Zsh configuration
+│   └── install.sh                 # Installation script
+├── install.sh                     # Main installation script
+├── LICENSE                        # License information
+└── README.md                      # This file
 ```
 
-1. Run the instalation script install.sh, located in the repository root (`~/hermit-shell/install.sh`):
+## Installation
 
+To install the hermit-shell configurations:
+
+1. **Clone the repository**:
+```bash
+git clone https://github.com/marcodiaslopes/hermit-shell.git
+cd hermit-shell
+```
+
+2. **Run the installation script**:
 ```bash
 ./install.sh
 ```
 
-1. Choose the desired shell. Zsh: `chsh -s $(which zsh)`, Fish: `chsh -s "$(command -v fish)"`.
+The installation script will:
+- Create symbolic links for the configuration files
+- Set up your shell environment with custom aliases and functions
+- Create necessary directories
 
-### Homebrew items
+## Security Note
 
-There are a few packages installed through homebrew (check `install.sh`):
-
-- pygments
-- starship
-- neovim
-- font-fira-code-nerd-font
-
-### NVChad
-
-You can install NeoVim (i.e. `brew install neovim`) and [NVChad](https://nvchad.com/docs/quickstart/install).
-
-### Colorsls
-
-Colorls is used for colorized `ls` output. You can install it via gem: `gem install colorls`. You may also want to install the [Nerd Fonts](https://www.nerdfonts.com/) version of your preferred font to properly display icons.
-
-## Documentation
-
-- [Bash configuration](docs/bash.md)
-- [Zsh configuration](docs/zsh.md)
-- [Fish](docs/fish.md)
-- [EditorConfig configuration](docs/editorconfig.md)
-- [Git configuration](docs/git.md)
-- [Starship configuration](docs/starship.md)
-
-## Development
-
-### Scripts
-
-- `yarn lint:md`: Lint markdown files.
-
-### Commit Messages
-
-Follow the conventions of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) leveraging [commitlint](https://commitlint.js.org).
+This repository uses environment variables to manage API keys for AI services (Claude, Gemini, DeepSeek, Ollama) instead of hardcoding credentials. You must set these environment variables before using the related tools:
 
 ```bash
-type(scope?): subject
+export GEMINI_API_KEY=your_gemini_key
+export DEEPSEEK_API_KEY=your_deepseek_key  
+export OLLAMA_API_KEY=your_ollama_key
 ```
 
-Scope is optional; multiple scopes are supported (current delimiter options: "/", "\" and ",").
+## Configuration Files
 
-Common types: `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, `test`. The full set of rules can be found in [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional#rules).
+Key configuration files include:
+- **`src/config/shell/alias.zsh`**: Shell aliases for common commands
+- **`src/config/shell/functions.zsh`**: Custom shell functions including `cdds` and `watch`
+- **`src/config/opencode/opencode.json`**: Opencode configuration with environment variable references
 
-### Tools
+## Development Tools
 
-- [remark-cli](https://www.npmjs.com/package/remark-cli)
-- [remark-preset-lint-recommended](https://www.npmjs.com/package/remark-preset-lint-recommended)
-- [commitlint](https://www.npmjs.com/package/@commitlint/cli)
-- [lefthook](https://www.npmjs.com/package/lefthook)
-Added atheme for testing
+The repository enhances developer workflows through tools such as:
+- Directory navigation utilities (`cdds` function)
+- Watch scripts for automatically running Python code on file changes
+- Integration with various AI service providers
+
+## AI Integration
+
+The shell configurations include helpers for:
+
+### Claude (claude -p command)
+- `claude -p` with proper API key environment variable support
+- Automatic cleanup of temporary files 
+
+### Gemini, DeepSeek, Ollama
+- Environment variable-based configuration for API access
+- Consistent tooling patterns across platforms
+
+## Contributing
+
+Contributions are welcome! Please submit issues and pull requests to improve this collection of shell utilities.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
